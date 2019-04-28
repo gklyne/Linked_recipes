@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Unit/Gram",
+  "@type": [
+    "lr:Unit",
+    "annal:EntityData"
+  ],
+  "annal:id": "Gram",
+  "annal:type": "lr:Unit",
+  "annal:type_id": "Unit",
+  "lr:multiple_name": "g",
+  "lr:quantity_type": "QuantityType/Weight",
+  "lr:singular_name": "g",
+  "rdfs:comment": "Gram",
+  "rdfs:label": "Gram"
+}

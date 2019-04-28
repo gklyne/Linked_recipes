@@ -1,0 +1,23 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_type/PreparationStep",
+  "@type": [
+    "annal:Type"
+  ],
+  "annal:field_aliases": [],
+  "annal:id": "PreparationStep",
+  "annal:ns_prefix": "",
+  "annal:supertype_uri": [],
+  "annal:type": "annal:Type",
+  "annal:type_id": "_type",
+  "annal:type_list": "_list/PreparationStep",
+  "annal:type_view": "_view/PreparationStep",
+  "annal:uri": "lr:PreparationStep",
+  "rdfs:comment": "# Preparation step\r\n\r\nA step in the creation of a [prepared foodstuff]($BASE:_type/PreparedFood).\r\n\r\nIndicates some combination of:\r\n\r\n- ingredients (and form of ingredients) added\r\n- process applied (e.g. high heat)\r\n- duration of process application\r\n- description of step",
+  "rdfs:label": "Preparation step"
+}

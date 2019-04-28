@@ -1,0 +1,23 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_type/Unit",
+  "@type": [
+    "annal:Type"
+  ],
+  "annal:field_aliases": [],
+  "annal:id": "Unit",
+  "annal:ns_prefix": "",
+  "annal:supertype_uri": [],
+  "annal:type": "annal:Type",
+  "annal:type_id": "_type",
+  "annal:type_list": "_list/Unit",
+  "annal:type_view": "_view/Unit",
+  "annal:uri": "lr:Unit",
+  "rdfs:comment": "# Unit of quantity\r\n",
+  "rdfs:label": "Unit of quantity"
+}

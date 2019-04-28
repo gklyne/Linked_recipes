@@ -1,0 +1,19 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "QuantityType/Count",
+  "@type": [
+    "lr:QuantityType",
+    "annal:EntityData"
+  ],
+  "annal:id": "Count",
+  "annal:type": "lr:QuantityType",
+  "annal:type_id": "QuantityType",
+  "lr:unit_default": "Unit/Piece",
+  "rdfs:comment": "# Food quantity as a count of pieces\r\n",
+  "rdfs:label": "Count of pieces"
+}

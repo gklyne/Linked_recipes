@@ -1,0 +1,37 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_list/QuantityType",
+  "@type": [
+    "annal:List"
+  ],
+  "annal:default_type": "_type/QuantityType",
+  "annal:default_view": "_view/QuantityType",
+  "annal:display_type": "_enum_list_type/List",
+  "annal:id": "QuantityType",
+  "annal:list_entity_selector": "'lr:QuantityType' in [@type]",
+  "annal:list_entity_type": "lr:QuantityType",
+  "annal:list_fields": [
+    {
+      "annal:field_id": "_field/Entity_id",
+      "annal:field_placement": "small:0,3"
+    },
+    {
+      "annal:field_id": "_field/DefaultUnit",
+      "annal:field_placement": "small:3,3"
+    },
+    {
+      "annal:field_id": "_field/Entity_label",
+      "annal:field_placement": "small:0,12;medium:6,6"
+    }
+  ],
+  "annal:type": "annal:List",
+  "annal:type_id": "_list",
+  "annal:uri": "annal:display/Default_list",
+  "rdfs:comment": "# Quantity type list\r\n\r\nList entities of type [Quantity type]($BASE:_type/QuantityType).",
+  "rdfs:label": "Quantity type list"
+}

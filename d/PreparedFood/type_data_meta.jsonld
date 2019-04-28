@@ -1,0 +1,15 @@
+{
+  "@context": [
+    {
+      "@base": "../"
+    },
+    "../coll_context.jsonld"
+  ],
+  "@id": "PreparedFood",
+  "@type": [
+    "annal:Type_Data"
+  ],
+  "annal:id": "PreparedFood",
+  "annal:type": "annal:Type_Data",
+  "annal:type_id": "_entitytypedata"
+}

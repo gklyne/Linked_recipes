@@ -1,0 +1,19 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_vocab/lr",
+  "@type": [
+    "annal:Vocabulary"
+  ],
+  "annal:id": "lr",
+  "annal:type": "annal:Vocabulary",
+  "annal:type_id": "_vocab",
+  "annal:uri": "http://id.ninebynine.org/linkedrecipes#",
+  "rdfs:comment": "# Linked recipes namespace\r\n\r\nNOTE: currently using id.ninebynine.org URI.  Probably want to find something more long-lived?",
+  "rdfs:label": "Linked recipes namespace",
+  "rdfs:seeAlso": []
+}

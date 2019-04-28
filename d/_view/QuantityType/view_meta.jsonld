@@ -1,0 +1,42 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_view/QuantityType",
+  "@type": [
+    "annal:View"
+  ],
+  "annal:id": "QuantityType",
+  "annal:open_view": true,
+  "annal:type": "annal:View",
+  "annal:type_id": "_view",
+  "annal:uri": "annal:display/Default_view",
+  "annal:view_entity_type": "lr:QuantityType",
+  "annal:view_fields": [
+    {
+      "annal:field_id": "_field/Entity_id",
+      "annal:field_placement": "small:0,12;medium:0,6",
+      "annal:property_uri": ""
+    },
+    {
+      "annal:field_id": "_field/DefaultUnit",
+      "annal:field_placement": "small:0,12;medium:6,6",
+      "annal:property_uri": ""
+    },
+    {
+      "annal:field_id": "_field/Entity_label",
+      "annal:field_placement": "small:0,12",
+      "annal:property_uri": ""
+    },
+    {
+      "annal:field_id": "_field/Entity_comment",
+      "annal:field_placement": "small:0,12",
+      "annal:property_uri": ""
+    }
+  ],
+  "rdfs:comment": "# Quantity type view\r\n\r\nView of [Quantity type]($BASE:_type/QuantityType) entity.",
+  "rdfs:label": "Quantity type view"
+}

@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_list/PreparationStep",
+  "@type": [
+    "annal:List"
+  ],
+  "annal:default_type": "_type/PreparationStep",
+  "annal:default_view": "_view/PreparationStep",
+  "annal:display_type": "List",
+  "annal:id": "PreparationStep",
+  "annal:list_entity_selector": "'lr:PreparationStep' in [@type]",
+  "annal:list_entity_type": "lr:PreparationStep",
+  "annal:list_fields": [
+    {
+      "annal:field_id": "_field/Entity_id",
+      "annal:field_placement": "small:0,3"
+    },
+    {
+      "annal:field_id": "_field/Entity_label",
+      "annal:field_placement": "small:3,9"
+    }
+  ],
+  "annal:type": "annal:List",
+  "annal:type_id": "_list",
+  "annal:uri": "annal:display/Default_list",
+  "rdfs:comment": "# Preparation step list\n\nList entities of type [Preparation step]($BASE:_type/PreparationStep).",
+  "rdfs:label": "Preparation step list"
+}

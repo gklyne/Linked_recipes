@@ -1,0 +1,37 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_list/Unit",
+  "@type": [
+    "annal:List"
+  ],
+  "annal:default_type": "_type/Unit",
+  "annal:default_view": "_view/Unit",
+  "annal:display_type": "_enum_list_type/List",
+  "annal:id": "Unit",
+  "annal:list_entity_selector": "'lr:Unit' in [@type]",
+  "annal:list_entity_type": "lr:Unit",
+  "annal:list_fields": [
+    {
+      "annal:field_id": "_field/Entity_id",
+      "annal:field_placement": "small:0,3"
+    },
+    {
+      "annal:field_id": "_field/QuantityType",
+      "annal:field_placement": "small:3,3"
+    },
+    {
+      "annal:field_id": "_field/Entity_label",
+      "annal:field_placement": "small:6,6"
+    }
+  ],
+  "annal:type": "annal:List",
+  "annal:type_id": "_list",
+  "annal:uri": "annal:display/Default_list",
+  "rdfs:comment": "# Unit of quantity list\r\n\r\nList entities of type [Unit of quantity]($BASE:_type/Unit).",
+  "rdfs:label": "Unit of quantity list"
+}

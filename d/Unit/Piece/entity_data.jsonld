@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Unit/Piece",
+  "@type": [
+    "lr:Unit",
+    "annal:EntityData"
+  ],
+  "annal:id": "Piece",
+  "annal:type": "lr:Unit",
+  "annal:type_id": "Unit",
+  "lr:multiple_name": "pieces",
+  "lr:quantity_type": "QuantityType/Count",
+  "lr:singular_name": "piece",
+  "rdfs:comment": "Piece",
+  "rdfs:label": "Piece"
+}

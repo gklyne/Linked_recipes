@@ -1,0 +1,27 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_type/BaseIngredient",
+  "@type": [
+    "annal:Type"
+  ],
+  "annal:field_aliases": [],
+  "annal:id": "BaseIngredient",
+  "annal:ns_prefix": "",
+  "annal:supertype_uri": [
+    {
+      "@id": "lr:FoodStuff"
+    }
+  ],
+  "annal:type": "annal:Type",
+  "annal:type_id": "_type",
+  "annal:type_list": "_list/Default_list",
+  "annal:type_view": "_view/Default_view",
+  "annal:uri": "lr:BaseIngredient",
+  "rdfs:comment": "# Foodstuff base ingredient\r\n\r\nEntity type [Foodstuff base ingredient]($BASE:_type/BaseIngredient), subtype of [Any foodstuff]($BASE:_type/FoodStuff).",
+  "rdfs:label": "Foodstuff base ingredient"
+}

@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_list/PreparedFood",
+  "@type": [
+    "annal:List"
+  ],
+  "annal:default_type": "_type/PreparedFood",
+  "annal:default_view": "_view/PreparedFood",
+  "annal:display_type": "List",
+  "annal:id": "PreparedFood",
+  "annal:list_entity_selector": "'lr:PreparedFood' in [@type]",
+  "annal:list_entity_type": "lr:PreparedFood",
+  "annal:list_fields": [
+    {
+      "annal:field_id": "_field/Entity_id",
+      "annal:field_placement": "small:0,3"
+    },
+    {
+      "annal:field_id": "_field/Entity_label",
+      "annal:field_placement": "small:3,9"
+    }
+  ],
+  "annal:type": "annal:List",
+  "annal:type_id": "_list",
+  "annal:uri": "annal:display/Default_list",
+  "rdfs:comment": "# Prepared foodstuff list\n\nList entities of type [Prepared foodstuff]($BASE:_type/PreparedFood).",
+  "rdfs:label": "Prepared foodstuff list"
+}

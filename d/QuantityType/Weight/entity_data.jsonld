@@ -1,0 +1,20 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "QuantityType/Weight",
+  "@type": [
+    "lr:QuantityType",
+    "annal:EntityData"
+  ],
+  "annal:id": "Weight",
+  "annal:type": "lr:QuantityType",
+  "annal:type_id": "QuantityType",
+  "lr:unit_default": "Unit/Gram",
+  "lr:unit_name": "g",
+  "rdfs:comment": "# Measured by weight\r\n\r\nFood quantity indicated by weight, typically in grams (g).\r\n",
+  "rdfs:label": "Weight (g)"
+}

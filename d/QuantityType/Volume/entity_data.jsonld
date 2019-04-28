@@ -1,0 +1,20 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "QuantityType/Volume",
+  "@type": [
+    "lr:QuantityType",
+    "annal:EntityData"
+  ],
+  "annal:id": "Volume",
+  "annal:type": "lr:QuantityType",
+  "annal:type_id": "QuantityType",
+  "lr:unit_default": "Unit/Millilitres",
+  "lr:unit_name": "ml",
+  "rdfs:comment": "# Measured by volume\r\n\r\nFood is measured by volume, typically in millilitres (ml).",
+  "rdfs:label": "Volume (ml)"
+}

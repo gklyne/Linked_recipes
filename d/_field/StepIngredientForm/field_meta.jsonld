@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_field/StepIngredientForm",
+  "@type": [
+    "annal:Field"
+  ],
+  "annal:default_value": "",
+  "annal:field_entity_type": "lr:StepIngredient",
+  "annal:field_fields": [],
+  "annal:field_placement": "small:0,12",
+  "annal:field_ref_field": "",
+  "annal:field_ref_restriction": "",
+  "annal:field_ref_type": "",
+  "annal:field_render_type": "_enum_render_type/Text",
+  "annal:field_value_mode": "_enum_value_mode/Value_direct",
+  "annal:field_value_type": "annal:Text",
+  "annal:id": "StepIngredientForm",
+  "annal:placeholder": "(Indicate form for ingredient: sliced, shopped, etc.)",
+  "annal:property_uri": "lr:step_ingredient_form",
+  "annal:repeat_label_add": "Add",
+  "annal:repeat_label_delete": "Remove",
+  "annal:superproperty_uri": [],
+  "annal:tooltip": "Form of ingredient used; e.g. chopped, finely sliced, etc.",
+  "annal:type": "annal:Field",
+  "annal:type_id": "_field",
+  "rdfs:comment": "# Form of ingredient used in preparation step\r\n\r\nForm of ingredient used; e.g. chopped, finely sliced, etc.\r\n",
+  "rdfs:label": "Form of ingredient"
+}

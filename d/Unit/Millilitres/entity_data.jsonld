@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Unit/Millilitres",
+  "@type": [
+    "lr:Unit",
+    "annal:EntityData"
+  ],
+  "annal:id": "Millilitres",
+  "annal:type": "lr:Unit",
+  "annal:type_id": "Unit",
+  "lr:multiple_name": "ml",
+  "lr:quantity_type": "QuantityType/Volume",
+  "lr:singular_name": "ml",
+  "rdfs:comment": "# Millilitres\r\n\r\nA measure of volume.",
+  "rdfs:label": "Millilitres"
+}

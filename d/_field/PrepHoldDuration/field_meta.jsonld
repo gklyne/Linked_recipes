@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_field/PrepHoldDuration",
+  "@type": [
+    "annal:Field"
+  ],
+  "annal:default_value": "",
+  "annal:field_entity_type": "lr:PreparedFood",
+  "annal:field_fields": [],
+  "annal:field_placement": "small:0,12;medium:0,6",
+  "annal:field_ref_field": "",
+  "annal:field_ref_restriction": "",
+  "annal:field_ref_type": "",
+  "annal:field_render_type": "_enum_render_type/Text",
+  "annal:field_value_mode": "_enum_value_mode/Value_direct",
+  "annal:field_value_type": "",
+  "annal:id": "PrepHoldDuration",
+  "annal:placeholder": "(duration for which preparation can be held once made.",
+  "annal:property_uri": "lr:prep_hold_duration",
+  "annal:repeat_label_add": "Add",
+  "annal:repeat_label_delete": "Remove",
+  "annal:superproperty_uri": [],
+  "annal:tooltip": "Duration for which preparation can be held once made.  The default representation is a number of minutes, but later developments may support additional units.  If not specified, assume that preparation can be held indefinitely (within reason).",
+  "annal:type": "annal:Field",
+  "annal:type_id": "_field",
+  "rdfs:comment": "# Hold duration\r\n\r\nTypical or maximum duration for which preparation can be held once made, before it needs to be used and/or served.\r\n\r\nThis value may be used to create timelines that avoid having to do too many things at once, and to help build an overall timeline for creating a meal.\r\n\r\n@@TODO: it's not yet clear how this will be used in different contexts, so usage details may need to be tweaked.\r\n\r\n@@TODO: I considered having a minimum time as well (e.g. for marinating), but (for now) I think that really belongs in the process description and/or free-form text (e.g. for curries that improve for being left a day).\r\n\r\n@@TODO: see also [Step duration]($BASE:_field/StepDuration): this should be expressed in the same terms - for now use minutes.",
+  "rdfs:label": "Hold duration"
+}

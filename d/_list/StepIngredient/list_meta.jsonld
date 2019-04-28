@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_list/StepIngredient",
+  "@type": [
+    "annal:List"
+  ],
+  "annal:default_type": "_type/StepIngredient",
+  "annal:default_view": "_view/StepIngredient",
+  "annal:display_type": "List",
+  "annal:id": "StepIngredient",
+  "annal:list_entity_selector": "'lr:StepIngredient' in [@type]",
+  "annal:list_entity_type": "lr:StepIngredient",
+  "annal:list_fields": [
+    {
+      "annal:field_id": "_field/Entity_id",
+      "annal:field_placement": "small:0,3"
+    },
+    {
+      "annal:field_id": "_field/Entity_label",
+      "annal:field_placement": "small:3,9"
+    }
+  ],
+  "annal:type": "annal:List",
+  "annal:type_id": "_list",
+  "annal:uri": "annal:display/Default_list",
+  "rdfs:comment": "# Ingredient for step list\n\nList entities of type [Ingredient for step]($BASE:_type/StepIngredient).",
+  "rdfs:label": "Ingredient for step list"
+}

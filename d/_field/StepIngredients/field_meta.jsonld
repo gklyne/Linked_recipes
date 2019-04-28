@@ -1,0 +1,39 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_field/StepIngredients",
+  "@type": [
+    "annal:Field"
+  ],
+  "annal:default_value": "",
+  "annal:field_entity_type": "lr:PreparationStep",
+  "annal:field_fields": [
+    {
+      "annal:field_id": "_field/StepIngredient",
+      "annal:field_placement": "small:0,12",
+      "annal:property_uri": "@id"
+    }
+  ],
+  "annal:field_placement": "small:0,12",
+  "annal:field_ref_field": "",
+  "annal:field_ref_restriction": "",
+  "annal:field_ref_type": "",
+  "annal:field_render_type": "_enum_render_type/Group_Set_Row",
+  "annal:field_value_mode": "_enum_value_mode/Value_direct",
+  "annal:field_value_type": "lr:PreparationStep",
+  "annal:id": "StepIngredients",
+  "annal:placeholder": "(Ingredients added in step of preparation)",
+  "annal:property_uri": "lr:step_ingredient",
+  "annal:repeat_label_add": "Add ingredient",
+  "annal:repeat_label_delete": "Remove ingredient",
+  "annal:superproperty_uri": [],
+  "annal:tooltip": "Ingredients added in step of preparation.",
+  "annal:type": "annal:Field",
+  "annal:type_id": "_field",
+  "rdfs:comment": "# Step add ingredients\r\n\r\nZero, one or more instances of [Step add ingredient]($BASE:_field/StepIngredient).",
+  "rdfs:label": "Step add ingredients"
+}

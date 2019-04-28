@@ -1,0 +1,18 @@
+{
+  "@context": [
+    {
+      "@base": "./"
+    },
+    "coll_context.jsonld"
+  ],
+  "@id": "../",
+  "@type": [
+    "annal:Collection"
+  ],
+  "annal:id": "Linked_recipes",
+  "annal:software_version": "0.5.9",
+  "annal:type": "annal:Collection",
+  "annal:type_id": "_coll",
+  "rdfs:comment": "",
+  "rdfs:label": "Data model experiments for linked recipes"
+}

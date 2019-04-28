@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_list/Quantity",
+  "@type": [
+    "annal:List"
+  ],
+  "annal:default_type": "_type/Quantity",
+  "annal:default_view": "_view/Quantity",
+  "annal:display_type": "List",
+  "annal:id": "Quantity",
+  "annal:list_entity_selector": "'lr:Quantity' in [@type]",
+  "annal:list_entity_type": "lr:Quantity",
+  "annal:list_fields": [
+    {
+      "annal:field_id": "_field/Entity_id",
+      "annal:field_placement": "small:0,3"
+    },
+    {
+      "annal:field_id": "_field/Entity_label",
+      "annal:field_placement": "small:3,9"
+    }
+  ],
+  "annal:type": "annal:List",
+  "annal:type_id": "_list",
+  "annal:uri": "annal:display/Default_list",
+  "rdfs:comment": "# Quantity of ingredient list\n\nList entities of type [Quantity of ingredient]($BASE:_type/Quantity).",
+  "rdfs:label": "Quantity of ingredient list"
+}

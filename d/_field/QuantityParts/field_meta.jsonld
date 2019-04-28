@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_field/QuantityParts",
+  "@type": [
+    "annal:Field"
+  ],
+  "annal:default_value": "1",
+  "annal:field_entity_type": "lr:Quantity",
+  "annal:field_fields": [],
+  "annal:field_placement": "small:0,12;medium:4,4",
+  "annal:field_ref_field": "",
+  "annal:field_ref_restriction": "",
+  "annal:field_ref_type": "",
+  "annal:field_render_type": "_enum_render_type/Text",
+  "annal:field_value_mode": "_enum_value_mode/Value_direct",
+  "annal:field_value_type": "xsd:int",
+  "annal:id": "QuantityParts",
+  "annal:placeholder": "(Quantity of foodstuff - parts)",
+  "annal:property_uri": "lr:quantity_parts",
+  "annal:repeat_label_add": "Add",
+  "annal:repeat_label_delete": "Remove",
+  "annal:superproperty_uri": [],
+  "annal:tooltip": "Fractional parts of unit for specifying quantity. Use one of: 1 (whole units), 2 (half units), 4 (quarter units) or 8 (eighth units)",
+  "annal:type": "annal:Field",
+  "annal:type_id": "_field",
+  "rdfs:comment": "# Parts of unit for quantity of foodstuff\r\n\r\nWhere a quantity is not a whole number of units (e.g. half a teaspoon, quarter of an onion), this field indicates a subdivision into parts of the base unit, which the \"amount\" value references to describe the total quantity.\r\n\r\nFor example, to specify 1\u00bd items, specify \"Parts of unit\" as 2, and \"Amount\" as 3, giving a quantity of 3/2 units.\r\n\r\nIn normal use, the value here is one of: 1 (whole units), 2 (half units), 4 (quarter units) or 8 (eighth units).\r\n",
+  "rdfs:label": "Quantity parts of unit"
+}

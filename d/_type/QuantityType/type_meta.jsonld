@@ -1,0 +1,23 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_type/QuantityType",
+  "@type": [
+    "annal:Type"
+  ],
+  "annal:field_aliases": [],
+  "annal:id": "QuantityType",
+  "annal:ns_prefix": "",
+  "annal:supertype_uri": [],
+  "annal:type": "annal:Type",
+  "annal:type_id": "_type",
+  "annal:type_list": "_list/QuantityType",
+  "annal:type_view": "_view/QuantityType",
+  "annal:uri": "lr:QuantityType",
+  "rdfs:comment": "# Type of quantity measurement\r\n\r\nHow quantities of some foodstuff are designated; e.g. weight (g), volume (ml), pieces (onions), etc.",
+  "rdfs:label": "Quantity type"
+}
