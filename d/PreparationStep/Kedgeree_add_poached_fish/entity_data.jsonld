@@ -1,0 +1,25 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_add_poached_fish",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_add_poached_fish",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/Kedgeree_poached_fish"
+    }
+  ],
+  "lr:step_process": "",
+  "rdfs:comment": "# Add poached and flaked fish",
+  "rdfs:label": "Add poached and flaked fish"
+}

@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Quantity/from_2_lemons",
+  "@type": [
+    "lr:Quantity",
+    "annal:EntityData"
+  ],
+  "annal:id": "from_2_lemons",
+  "annal:type": "lr:Quantity",
+  "annal:type_id": "Quantity",
+  "lr:quantity_number": "2",
+  "lr:quantity_parts": "1",
+  "lr:quantity_unit": "Unit/Piece",
+  "rdfs:comment": "# From 2 lemons\r\n\r\nJuice from 2 lemons.\r\n\r\nIf not using fresh lemons, this would be about 4-6 tbsp?",
+  "rdfs:label": "From 2 lemons"
+}

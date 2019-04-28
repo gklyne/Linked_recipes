@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "StepIngredient/Kedgeree_eggs",
+  "@type": [
+    "lr:StepIngredient",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_eggs",
+  "annal:type": "lr:StepIngredient",
+  "annal:type_id": "StepIngredient",
+  "lr:step_ingredient_food": "PreparedFood/Kedgeree_eggs",
+  "lr:step_ingredient_form": "",
+  "lr:step_ingredient_quantity": "Quantity/2_servings",
+  "rdfs:comment": "# Kedgeree boiled, peeled and quartered eggs",
+  "rdfs:label": "Kedgeree boiled, peeled and quartered eggs"
+}

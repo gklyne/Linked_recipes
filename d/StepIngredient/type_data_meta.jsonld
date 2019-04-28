@@ -1,0 +1,15 @@
+{
+  "@context": [
+    {
+      "@base": "../"
+    },
+    "../coll_context.jsonld"
+  ],
+  "@id": "StepIngredient",
+  "@type": [
+    "annal:Type_Data"
+  ],
+  "annal:id": "StepIngredient",
+  "annal:type": "annal:Type_Data",
+  "annal:type_id": "_entitytypedata"
+}

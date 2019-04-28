@@ -1,0 +1,42 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparedFood/Kedgeree_poached_fish",
+  "@type": [
+    "lr:PreparedFood",
+    "lr:FoodStuff",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_poached_fish",
+  "annal:type": "lr:PreparedFood",
+  "annal:type_id": "PreparedFood",
+  "lr:prep_hold_duration": "30",
+  "lr:prep_quantity": "Quantity/2_servings",
+  "lr:prep_steps": [
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_add_fish"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Bring_to_boil"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Simmer_5_mins"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Fish_remove_cool"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Fish_remove_skin"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Fish_flake_into_chunks"
+    }
+  ],
+  "lr:vessel": "Shallow pan",
+  "rdfs:comment": "# Kedgeree poached fish",
+  "rdfs:label": "Kedgeree poached fish"
+}

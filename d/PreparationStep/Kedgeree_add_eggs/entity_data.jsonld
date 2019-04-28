@@ -1,0 +1,25 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_add_eggs",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_add_eggs",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/Kedgeree_eggs"
+    }
+  ],
+  "lr:step_process": "",
+  "rdfs:comment": "# Add boilled, peeled and quartered eggs",
+  "rdfs:label": "Add boilled, peeled and quartered eggs"
+}

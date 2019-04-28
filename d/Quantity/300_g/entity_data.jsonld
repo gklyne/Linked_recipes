@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Quantity/300_g",
+  "@type": [
+    "lr:Quantity",
+    "annal:EntityData"
+  ],
+  "annal:id": "300_g",
+  "annal:type": "lr:Quantity",
+  "annal:type_id": "Quantity",
+  "lr:quantity_number": "300",
+  "lr:quantity_parts": "1",
+  "lr:quantity_unit": "Unit/Gram",
+  "rdfs:comment": "300 grams",
+  "rdfs:label": "300 grams"
+}

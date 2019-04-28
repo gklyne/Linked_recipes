@@ -1,0 +1,18 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Process/Simmer",
+  "@type": [
+    "lr:Process",
+    "annal:EntityData"
+  ],
+  "annal:id": "Simmer",
+  "annal:type": "lr:Process",
+  "annal:type_id": "Process",
+  "rdfs:comment": "Simmer",
+  "rdfs:label": "Simmer"
+}

@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "StepIngredient/Kedgeree_rice_water",
+  "@type": [
+    "lr:StepIngredient",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_rice_water",
+  "annal:type": "lr:StepIngredient",
+  "annal:type_id": "StepIngredient",
+  "lr:step_ingredient_food": "FoodStuff/Water",
+  "lr:step_ingredient_form": "Cold or warm",
+  "lr:step_ingredient_quantity": "Quantity/750_ml",
+  "rdfs:comment": "# Kedgeree rice water",
+  "rdfs:label": "Kedgeree rice water"
+}

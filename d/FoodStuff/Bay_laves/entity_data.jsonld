@@ -1,0 +1,18 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "FoodStuff/Bay_laves",
+  "@type": [
+    "lr:FoodStuff",
+    "annal:EntityData"
+  ],
+  "annal:id": "Bay_laves",
+  "annal:type": "lr:FoodStuff",
+  "annal:type_id": "FoodStuff",
+  "rdfs:comment": "Bay leaves",
+  "rdfs:label": "Bay leaves"
+}

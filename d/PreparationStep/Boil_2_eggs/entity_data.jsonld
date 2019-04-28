@@ -1,0 +1,25 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Boil_2_eggs",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Boil_2_eggs",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "10",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/2_large_eggs"
+    }
+  ],
+  "lr:step_process": "Process/Process_boil",
+  "rdfs:comment": "# Boil 2 eggs",
+  "rdfs:label": "Boil 2 eggs"
+}

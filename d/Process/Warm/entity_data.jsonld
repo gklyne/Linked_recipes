@@ -1,0 +1,18 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Process/Warm",
+  "@type": [
+    "lr:Process",
+    "annal:EntityData"
+  ],
+  "annal:id": "Warm",
+  "annal:type": "lr:Process",
+  "annal:type_id": "Process",
+  "rdfs:comment": "# Warm\r\n\r\nApply gentle heat, stirring food to prevent burning or sticking to pan.",
+  "rdfs:label": "Warm"
+}

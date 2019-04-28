@@ -1,0 +1,39 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparedFood/Kedgeree_eggs",
+  "@type": [
+    "lr:PreparedFood",
+    "lr:FoodStuff",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_eggs",
+  "annal:type": "lr:PreparedFood",
+  "annal:type_id": "PreparedFood",
+  "lr:prep_hold_duration": "30",
+  "lr:prep_quantity": "Quantity/2_servings",
+  "lr:prep_steps": [
+    {
+      "lr:prep_step": "PreparationStep/Boil_2_eggs"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Eggs_remove_cool"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Leave_eggs"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Peel_eggs"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Quarter_eggs"
+    }
+  ],
+  "lr:vessel": "Small saucepan",
+  "rdfs:comment": "# Kedgeree boiled, peeled and quartered eggs",
+  "rdfs:label": "Kedgeree boiled, peeled and quartered eggs"
+}

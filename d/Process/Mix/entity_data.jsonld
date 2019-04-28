@@ -1,0 +1,18 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Process/Mix",
+  "@type": [
+    "lr:Process",
+    "annal:EntityData"
+  ],
+  "annal:id": "Mix",
+  "annal:type": "lr:Process",
+  "annal:type_id": "Process",
+  "rdfs:comment": "# Mix ingredients",
+  "rdfs:label": "Mix ingredients"
+}

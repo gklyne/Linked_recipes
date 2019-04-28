@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_warm_mix",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_warm_mix",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "2",
+  "lr:step_ingredient": [],
+  "lr:step_process": "Process/Warm",
+  "rdfs:comment": "# Warm and mix ingredients",
+  "rdfs:label": "Warm and mix ingredients"
+}

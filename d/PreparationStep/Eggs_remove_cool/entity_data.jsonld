@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Eggs_remove_cool",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Eggs_remove_cool",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "5",
+  "lr:step_ingredient": [],
+  "lr:step_process": "Process/Cool",
+  "rdfs:comment": "# Remove eggs from pan and cool under cold water",
+  "rdfs:label": "Remove eggs from pan and cool under cold water"
+}

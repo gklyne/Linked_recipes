@@ -1,0 +1,18 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Process/Wash",
+  "@type": [
+    "lr:Process",
+    "annal:EntityData"
+  ],
+  "annal:id": "Wash",
+  "annal:type": "lr:Process",
+  "annal:type_id": "Process",
+  "rdfs:comment": "Wash by immersion in water, then draining off the water.",
+  "rdfs:label": "Wash"
+}

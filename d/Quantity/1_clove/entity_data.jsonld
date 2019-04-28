@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Quantity/1_clove",
+  "@type": [
+    "lr:Quantity",
+    "annal:EntityData"
+  ],
+  "annal:id": "1_clove",
+  "annal:type": "lr:Quantity",
+  "annal:type_id": "Quantity",
+  "lr:quantity_number": "1",
+  "lr:quantity_parts": "1",
+  "lr:quantity_unit": "Unit/Clove",
+  "rdfs:comment": "1 clove",
+  "rdfs:label": "1 clove"
+}

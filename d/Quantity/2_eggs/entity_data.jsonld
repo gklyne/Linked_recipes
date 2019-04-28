@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Quantity/2_eggs",
+  "@type": [
+    "lr:Quantity",
+    "annal:EntityData"
+  ],
+  "annal:id": "2_eggs",
+  "annal:type": "lr:Quantity",
+  "annal:type_id": "Quantity",
+  "lr:quantity_number": "2",
+  "lr:quantity_parts": "1",
+  "lr:quantity_unit": "Unit/Eggs",
+  "rdfs:comment": "# 2 eggs\r\n\r\nUse 2 large eggs",
+  "rdfs:label": "2 eggs"
+}

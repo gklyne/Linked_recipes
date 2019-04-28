@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "StepIngredient/Kedgeree_onion",
+  "@type": [
+    "lr:StepIngredient",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_onion",
+  "annal:type": "lr:StepIngredient",
+  "annal:type_id": "StepIngredient",
+  "lr:step_ingredient_food": "FoodStuff/Onion",
+  "lr:step_ingredient_form": "Finely chopped",
+  "lr:step_ingredient_quantity": "Quantity/1_medium",
+  "rdfs:comment": "# Kedgeree onion\r\n\r\nUse one medium onion, or a bunch of spring onions.",
+  "rdfs:label": "Kedgeree onion"
+}

@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "StepIngredient/Kedgeree_smoked_haddock",
+  "@type": [
+    "lr:StepIngredient",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_smoked_haddock",
+  "annal:type": "lr:StepIngredient",
+  "annal:type_id": "StepIngredient",
+  "lr:step_ingredient_food": "FoodStuff/Smoked_haddock",
+  "lr:step_ingredient_form": "Boned",
+  "lr:step_ingredient_quantity": "Quantity/300_g",
+  "rdfs:comment": "# Kedgeree smoked haddock\r\n\r\nPreferably undied.",
+  "rdfs:label": "Kedgeree smoked haddock"
+}

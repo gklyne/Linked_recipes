@@ -13,7 +13,7 @@
   "annal:field_entity_type": "",
   "annal:field_fields": [
     {
-      "annal:field_id": "_field/Entity_label",
+      "annal:field_id": "_field/Step_label",
       "annal:field_placement": "small:0,6",
       "annal:property_uri": ""
     },

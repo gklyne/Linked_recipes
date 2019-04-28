@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "StepIngredient/Kedgeree_poached_fish",
+  "@type": [
+    "lr:StepIngredient",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_poached_fish",
+  "annal:type": "lr:StepIngredient",
+  "annal:type_id": "StepIngredient",
+  "lr:step_ingredient_food": "PreparedFood/Kedgeree_poached_fish",
+  "lr:step_ingredient_form": "",
+  "lr:step_ingredient_quantity": "Quantity/2_servings",
+  "rdfs:comment": "# Kedgeree poached fish",
+  "rdfs:label": "Kedgeree poached fish"
+}

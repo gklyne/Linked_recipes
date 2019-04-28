@@ -1,0 +1,18 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Process/Process_boil",
+  "@type": [
+    "lr:Process",
+    "annal:EntityData"
+  ],
+  "annal:id": "Process_boil",
+  "annal:type": "lr:Process",
+  "annal:type_id": "Process",
+  "rdfs:comment": "Boil",
+  "rdfs:label": "Boil"
+}

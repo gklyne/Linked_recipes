@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Unit/Leaf",
+  "@type": [
+    "lr:Unit",
+    "annal:EntityData"
+  ],
+  "annal:id": "Leaf",
+  "annal:type": "lr:Unit",
+  "annal:type_id": "Unit",
+  "lr:multiple_name": "leaves",
+  "lr:quantity_type": "QuantityType/Count",
+  "lr:singular_name": "leaf",
+  "rdfs:comment": "# Leaf\r\n\r\nE.g, bay leaf.",
+  "rdfs:label": "Leaf"
+}

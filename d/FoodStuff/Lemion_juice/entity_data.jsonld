@@ -1,0 +1,18 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "FoodStuff/Lemion_juice",
+  "@type": [
+    "lr:FoodStuff",
+    "annal:EntityData"
+  ],
+  "annal:id": "Lemion_juice",
+  "annal:type": "lr:FoodStuff",
+  "annal:type_id": "FoodStuff",
+  "rdfs:comment": "Lemon juice",
+  "rdfs:label": "Lemon juice"
+}

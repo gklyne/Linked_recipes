@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Quantity/1_tbsp",
+  "@type": [
+    "lr:Quantity",
+    "annal:EntityData"
+  ],
+  "annal:id": "1_tbsp",
+  "annal:type": "lr:Quantity",
+  "annal:type_id": "Quantity",
+  "lr:quantity_number": "1",
+  "lr:quantity_parts": "1",
+  "lr:quantity_unit": "Unit/tablespoon",
+  "rdfs:comment": "# 1 tbsp",
+  "rdfs:label": "1 tbsp"
+}

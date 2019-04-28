@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_heat_curry",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_heat_curry",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "3",
+  "lr:step_ingredient": [],
+  "lr:step_process": "Process/Medium_heat",
+  "rdfs:comment": "# Heat mixture\r\n\r\nRaise heat to medium, cook for a few minutes",
+  "rdfs:label": "Heat mixture"
+}

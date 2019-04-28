@@ -1,0 +1,25 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_add_onion_etc",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_add_onion_etc",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/Kedgeree_onion_ginger_etc"
+    }
+  ],
+  "lr:step_process": "",
+  "rdfs:comment": "# Add onion, ginger and tomato\r\n\r\nAdd the cooked and spiced onion, ginger and tomato.",
+  "rdfs:label": "Add onion, ginger and tomato"
+}

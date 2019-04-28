@@ -1,0 +1,31 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Soften_garlic_ginger_onion",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Soften_garlic_ginger_onion",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "5",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/Kedgeree_garlic"
+    },
+    {
+      "@id": "StepIngredient/Kedgeree_ginger"
+    },
+    {
+      "@id": "StepIngredient/Kedgeree_onion"
+    }
+  ],
+  "lr:step_process": "Process/Low_heat",
+  "rdfs:comment": "# Soften garlic, ginger and onion",
+  "rdfs:label": "Soften garlic, ginger and onion"
+}

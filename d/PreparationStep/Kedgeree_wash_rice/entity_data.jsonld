@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_wash_rice",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_wash_rice",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "",
+  "lr:step_ingredient": [],
+  "lr:step_process": "Process/Wash",
+  "rdfs:comment": "# Wash rice",
+  "rdfs:label": "Wash rice"
+}

@@ -1,0 +1,25 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_add_tomato",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_add_tomato",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "0",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/Kedgeree_tomato"
+    }
+  ],
+  "lr:step_process": "Process/Mix",
+  "rdfs:comment": "# Add chopped tomato",
+  "rdfs:label": "Add chopped tomato"
+}

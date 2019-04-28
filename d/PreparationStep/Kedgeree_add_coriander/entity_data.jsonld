@@ -1,0 +1,25 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_add_coriander",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_add_coriander",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "",
+  "lr:step_ingredient": [
+    {
+      "@id": ""
+    }
+  ],
+  "lr:step_process": "Process/Mix",
+  "rdfs:comment": "# Add and mix in coriander",
+  "rdfs:label": "Add and mix in coriander"
+}

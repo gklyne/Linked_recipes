@@ -43,12 +43,12 @@
     },
     {
       "annal:field_id": "_field/SpepProcess",
-      "annal:field_placement": "small:0,12",
+      "annal:field_placement": "small:0,12;medium:0,6",
       "annal:property_uri": ""
     },
     {
       "annal:field_id": "_field/StepDuration",
-      "annal:field_placement": "small:0,12",
+      "annal:field_placement": "small:0,12;medium:6,6",
       "annal:property_uri": ""
     }
   ],

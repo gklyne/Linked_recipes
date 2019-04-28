@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Unit/Serving",
+  "@type": [
+    "lr:Unit",
+    "annal:EntityData"
+  ],
+  "annal:id": "Serving",
+  "annal:type": "lr:Unit",
+  "annal:type_id": "Unit",
+  "lr:multiple_name": "servings",
+  "lr:quantity_type": "QuantityType/Count",
+  "lr:singular_name": "serving",
+  "rdfs:comment": "Quantity measured as a number of (typical) servings.",
+  "rdfs:label": "Serving"
+}

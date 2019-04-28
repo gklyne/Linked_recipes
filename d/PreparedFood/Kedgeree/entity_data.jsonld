@@ -1,0 +1,57 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparedFood/Kedgeree",
+  "@type": [
+    "lr:PreparedFood",
+    "lr:FoodStuff",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree",
+  "annal:type": "lr:PreparedFood",
+  "annal:type_id": "PreparedFood",
+  "lr:prep_hold_duration": "10",
+  "lr:prep_quantity": "Quantity/2_servings",
+  "lr:prep_steps": [
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_boil_rice"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_wash_rice"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_warm_rice"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_add_onion_etc"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_warm_mix"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_add_poached_fish"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_warm_mix"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_add_eggs"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_warm_mix"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_add_coriander"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_serve"
+    }
+  ],
+  "lr:vessel": "Use large pan to which other ingredients can be added",
+  "rdfs:comment": "# Kegeree\r\n\r\nThis is based on a recipe by Jamie Oliver, collected for our family recipe collection by Mandy Klyne.\r\n\r\n",
+  "rdfs:label": "Kedgeree"
+}

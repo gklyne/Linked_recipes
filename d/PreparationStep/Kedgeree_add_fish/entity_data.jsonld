@@ -1,0 +1,28 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_add_fish",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_add_fish",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/Kedgeree_smoked_haddock"
+    },
+    {
+      "@id": "StepIngredient/Kedgeree_bay_leaves"
+    }
+  ],
+  "lr:step_process": "",
+  "rdfs:comment": "# Add fish\r\n\r\nLay out fish in shallow pan, just cover with water and add bay leaves",
+  "rdfs:label": "Kedgeree add fish, bay leaves, cover with water"
+}

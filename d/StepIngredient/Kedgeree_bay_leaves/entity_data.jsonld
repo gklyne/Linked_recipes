@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "StepIngredient/Kedgeree_bay_leaves",
+  "@type": [
+    "lr:StepIngredient",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_bay_leaves",
+  "annal:type": "lr:StepIngredient",
+  "annal:type_id": "StepIngredient",
+  "lr:step_ingredient_food": "FoodStuff/Bay_laves",
+  "lr:step_ingredient_form": "Fresh",
+  "lr:step_ingredient_quantity": "Quantity/2_leaves",
+  "rdfs:comment": "# Kedgeree bay leaves\r\n",
+  "rdfs:label": "Kedgeree bay leaves"
+}

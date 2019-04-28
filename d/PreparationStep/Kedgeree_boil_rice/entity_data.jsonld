@@ -1,0 +1,28 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_boil_rice",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_boil_rice",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "10",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/Kedgeree_rice"
+    },
+    {
+      "@id": "StepIngredient/Kedgeree_rice_water"
+    }
+  ],
+  "lr:step_process": "Process/Process_boil",
+  "rdfs:comment": "Boil rice",
+  "rdfs:label": "Boil rice"
+}

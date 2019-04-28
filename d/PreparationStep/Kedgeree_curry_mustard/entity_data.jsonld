@@ -1,0 +1,28 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_curry_mustard",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_curry_mustard",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "0",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/Kedgeree_curry_powder"
+    },
+    {
+      "@id": "StepIngredient/Kedgeree_mustard_seeds"
+    }
+  ],
+  "lr:step_process": "Process/Mix",
+  "rdfs:comment": "# Mix in curry powder and mustard seeds",
+  "rdfs:label": "Mix in curry powder and mustard seeds"
+}

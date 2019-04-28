@@ -1,0 +1,19 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "BaseIngredient/Basmati_rice",
+  "@type": [
+    "lr:BaseIngredient",
+    "lr:FoodStuff",
+    "annal:EntityData"
+  ],
+  "annal:id": "Basmati_rice",
+  "annal:type": "lr:BaseIngredient",
+  "annal:type_id": "BaseIngredient",
+  "rdfs:comment": "Basmati rice",
+  "rdfs:label": "Basmati rice"
+}

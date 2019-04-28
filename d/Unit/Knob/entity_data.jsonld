@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Unit/Knob",
+  "@type": [
+    "lr:Unit",
+    "annal:EntityData"
+  ],
+  "annal:id": "Knob",
+  "annal:type": "lr:Unit",
+  "annal:type_id": "Unit",
+  "lr:multiple_name": "knobs",
+  "lr:quantity_type": "QuantityType/Count",
+  "lr:singular_name": "knob",
+  "rdfs:comment": "# Knob\r\n\r\nA small piece (e.g. of butter) - maybe about 10ml?\r\n",
+  "rdfs:label": "Knob"
+}

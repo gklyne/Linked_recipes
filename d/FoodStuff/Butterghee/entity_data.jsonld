@@ -1,0 +1,18 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "FoodStuff/Butterghee",
+  "@type": [
+    "lr:FoodStuff",
+    "annal:EntityData"
+  ],
+  "annal:id": "Butterghee",
+  "annal:type": "lr:FoodStuff",
+  "annal:type_id": "FoodStuff",
+  "rdfs:comment": "# Butter ghee",
+  "rdfs:label": "Butter ghee"
+}

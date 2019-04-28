@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Heat_off",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Heat_off",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "0",
+  "lr:step_ingredient": [],
+  "lr:step_process": "Process/Heat_off",
+  "rdfs:comment": "Heat off, leave until ready to use",
+  "rdfs:label": "Heat off, leave until ready to use"
+}

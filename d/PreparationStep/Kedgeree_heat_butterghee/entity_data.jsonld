@@ -1,0 +1,25 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparationStep/Kedgeree_heat_butterghee",
+  "@type": [
+    "lr:PreparationStep",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_heat_butterghee",
+  "annal:type": "lr:PreparationStep",
+  "annal:type_id": "PreparationStep",
+  "lr:step_duration": "2",
+  "lr:step_ingredient": [
+    {
+      "@id": "StepIngredient/Kedgeree_butterghee"
+    }
+  ],
+  "lr:step_process": "Process/Low_heat",
+  "rdfs:comment": "# Heat butterghee\r\n\r\nHeat until melted, and hot enough to start frying onion.",
+  "rdfs:label": "Heat butterghee"
+}

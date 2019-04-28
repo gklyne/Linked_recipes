@@ -52,6 +52,6 @@
       "annal:property_uri": ""
     }
   ],
-  "rdfs:comment": "# Ingredient for step view\r\n\r\nView entity of type [Ingredient for step]($BASE:_type/StepIngredient).\r\n\r\n- reference foodstuff\r\n- reference quantity\r\n- form (sliced, shopped, etc.)\r\n- commentary\r\n\r\n",
+  "rdfs:comment": "# Ingredient for step view\r\n\r\nView entity of type [Ingredient for step]($BASE:_type/StepIngredient).\r\n\r\nThis entity type references a basic or prepared food, and includes quantity and other information specific to the current recipe.\r\n\r\nWhen referencing a prepared food, don't specify form.  In a prepared food is specific to the same recipe, use the same id and description.\r\n\r\nThe comment field can include any additional information (but consider if this is more appropriately included in the step description).\r\n\r\n",
   "rdfs:label": "Ingredient for step view"
 }

@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_field/QuantityType",
+  "@type": [
+    "annal:Field"
+  ],
+  "annal:default_value": "",
+  "annal:field_entity_type": "lr:Unit",
+  "annal:field_fields": [],
+  "annal:field_placement": "small:0,12",
+  "annal:field_ref_field": "",
+  "annal:field_ref_restriction": "",
+  "annal:field_ref_type": "_type/QuantityType",
+  "annal:field_render_type": "_enum_render_type/Enum_optional",
+  "annal:field_value_mode": "_enum_value_mode/Value_direct",
+  "annal:field_value_type": "lr:QuantityType",
+  "annal:id": "QuantityType",
+  "annal:placeholder": "(Quantity type)",
+  "annal:property_uri": "lr:quantity_type",
+  "annal:repeat_label_add": "Add",
+  "annal:repeat_label_delete": "Remove",
+  "annal:superproperty_uri": [],
+  "annal:tooltip": "Quantity type for unit",
+  "annal:type": "annal:Field",
+  "annal:type_id": "_field",
+  "rdfs:comment": "# Type of quantity",
+  "rdfs:label": "Quantity type"
+}

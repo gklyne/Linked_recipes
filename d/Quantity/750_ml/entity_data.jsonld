@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Quantity/750_ml",
+  "@type": [
+    "lr:Quantity",
+    "annal:EntityData"
+  ],
+  "annal:id": "750_ml",
+  "annal:type": "lr:Quantity",
+  "annal:type_id": "Quantity",
+  "lr:quantity_number": "750",
+  "lr:quantity_parts": "1",
+  "lr:quantity_unit": "Unit/Millilitres",
+  "rdfs:comment": "# 750 ml",
+  "rdfs:label": "750 ml"
+}

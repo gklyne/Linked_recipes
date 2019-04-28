@@ -1,0 +1,21 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "Unit/tablespoon",
+  "@type": [
+    "lr:Unit",
+    "annal:EntityData"
+  ],
+  "annal:id": "tablespoon",
+  "annal:type": "lr:Unit",
+  "annal:type_id": "Unit",
+  "lr:multiple_name": "tbsp",
+  "lr:quantity_type": "QuantityType/Volume",
+  "lr:singular_name": "tbsp",
+  "rdfs:comment": "# Tablespoon\r\n\r\nAbout 15 ml.",
+  "rdfs:label": "Tablespoon"
+}
