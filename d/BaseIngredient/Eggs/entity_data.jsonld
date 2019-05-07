@@ -1,0 +1,19 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "BaseIngredient/Eggs",
+  "@type": [
+    "lr:BaseIngredient",
+    "lr:FoodStuff",
+    "annal:EntityData"
+  ],
+  "annal:id": "Eggs",
+  "annal:type": "lr:BaseIngredient",
+  "annal:type_id": "BaseIngredient",
+  "rdfs:comment": "Eggs",
+  "rdfs:label": "Eggs"
+}

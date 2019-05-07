@@ -1,0 +1,46 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <title class="recipe-title">Recipe - @@title@@</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/founddation/css/foundation_reduced.css" />
+    <link rel="stylesheet" href="../static/annalist/css/annalist.css" />
+    <script src="../static/foundation/js/vendor/modernizr.js"></script>
+</head>
+
+<body>
+
+    <h2 class="page-heading recipe-title">Recipe - @@title@@</h2>
+  
+    <div class="recipe-diagram">
+        <p>
+            @@recipe diagram here@@
+        </p>
+    </div>
+  
+    <script src="../static/foundation/js/vendor/jquery.js"></script>
+    <!--  <script src="../static/{% static 'foundation/js/foundation.min.js' %}"></script> -->
+    <script src="../static/foundation/js/foundation/foundation.js"></script>
+    <!--
+    <script src="../static/js/foundation/foundation.dropdown.js"></script>
+    <script src="../static/js/foundation/foundation.topbar.js"></script>
+    <script src="../static/js/foundation/foundation.alert.js"></script>
+    -->
+    <script src="../static/annalist/js/annalist.js"></script>
+    <script src="../static/js/recipe.js"></script>
+    <script>
+        // Use <base>/pages/recipe/index.html?id=recipe-id to access
+        const urlParams = new URLSearchParams(window.location.search);
+        const recipe_id = urlParams.get('id');
+        const base_url  = new URL("../../d/", document.URL)
+        console.log("Drawing recipe: %s from %s", recipe_id, base_url)
+        $(document).foundation();
+        annalist.resize_handler({});
+        recipe.draw(base_url, recipe_id)
+    </script>
+
+</body>
+
+</html>

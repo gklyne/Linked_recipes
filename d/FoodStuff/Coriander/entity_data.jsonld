@@ -5,14 +5,14 @@
     },
     "../../coll_context.jsonld"
   ],
-  "@id": "FoodStuff/Eggs",
+  "@id": "FoodStuff/Coriander",
   "@type": [
     "lr:FoodStuff",
     "annal:EntityData"
   ],
-  "annal:id": "Eggs",
+  "annal:id": "Coriander",
   "annal:type": "lr:FoodStuff",
   "annal:type_id": "FoodStuff",
-  "rdfs:comment": "Eggs",
-  "rdfs:label": "Eggs"
+  "rdfs:comment": "Coriander",
+  "rdfs:label": "Coriander"
 }

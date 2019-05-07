@@ -16,7 +16,7 @@
   "lr:step_duration": "",
   "lr:step_ingredient": [
     {
-      "@id": ""
+      "@id": "StepIngredient/1_handful_coriander"
     }
   ],
   "lr:step_process": "Process/Mix",

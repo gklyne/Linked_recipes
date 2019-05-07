@@ -1,0 +1,1090 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"v",
+				"val_list"
+			],
+			[
+				"get_",
+				"get_step_read_fn"
+			],
+			[
+				"get",
+				"get_step_id"
+			],
+			[
+				"step",
+				"step_ids"
+			],
+			[
+				"no",
+				"normalized_path"
+			],
+			[
+				"page",
+				"page_path"
+			],
+			[
+				"res",
+				"resource_url"
+			],
+			[
+				"recip",
+				"recipe"
+			],
+			[
+				"reci",
+				"recipe_id"
+			],
+			[
+				"recipe",
+				"recipe_id"
+			],
+			[
+				"rec",
+				"recipe_cols"
+			],
+			[
+				"base",
+				"base_url"
+			],
+			[
+				"annal",
+				"annal_uri"
+			],
+			[
+				"s",
+				"settings"
+			],
+			[
+				"value",
+				"value_dict"
+			],
+			[
+				"_",
+				"_superproperty_closure"
+			],
+			[
+				"rel",
+				"rel_uri"
+			],
+			[
+				"clo",
+				"ClosureCache"
+			],
+			[
+				"add",
+				"add_entity"
+			],
+			[
+				"ent",
+				"entity_ids"
+			],
+			[
+				"scop",
+				"scope_entity_ids"
+			],
+			[
+				"sco",
+				"scope_entity_ids"
+			],
+			[
+				"_ca",
+				"_cache"
+			],
+			[
+				"valu",
+				"value_dict"
+			],
+			[
+				"va",
+				"value_dict"
+			],
+			[
+				"_ent",
+				"_entities_by_id"
+			],
+			[
+				"entity",
+				"entity_id"
+			],
+			[
+				"remove_all_caches",
+				"remove_all_caches"
+			],
+			[
+				"new",
+				"new_value"
+			],
+			[
+				"super",
+				"supertype_uri"
+			],
+			[
+				"_cache",
+				"_cachekey"
+			],
+			[
+				"_cac",
+				"_cachekey"
+			],
+			[
+				"_make",
+				"_make_cache_key"
+			],
+			[
+				"make",
+				"make_cache_key"
+			],
+			[
+				"cache",
+				"cachekey"
+			],
+			[
+				"match",
+				"match_fn"
+			],
+			[
+				"flush_",
+				"flush_cache"
+			],
+			[
+				"coll_id",
+				"coll_id"
+			],
+			[
+				"fl",
+				"flush_cache"
+			],
+			[
+				"_load",
+				"_load_entity_data"
+			],
+			[
+				"remove",
+				"remove_all_caches"
+			],
+			[
+				"obj",
+				"objectcaches"
+			],
+			[
+				"cache_",
+				"_cache_subkey"
+			],
+			[
+				"enti",
+				"entity_cls"
+			],
+			[
+				"object",
+				"objectcache"
+			],
+			[
+				"_c",
+				"_cache"
+			],
+			[
+				"cac",
+				"cache"
+			],
+			[
+				"view",
+				"viewinfo"
+			],
+			[
+				"auth",
+				"auth_email"
+			],
+			[
+				"auth_",
+				"auth_domain"
+			],
+			[
+				"verified",
+				"verified_url"
+			],
+			[
+				"ver",
+				"verified_email"
+			],
+			[
+				"lang",
+				"language_text_value"
+			],
+			[
+				"fie",
+				"field_string"
+			],
+			[
+				"field",
+				"field_string"
+			],
+			[
+				"reserv",
+				"reserved"
+			],
+			[
+				"reserved",
+				"reserved_ok"
+			],
+			[
+				"id",
+				"id_string"
+			],
+			[
+				"reser",
+				"reserved_ok"
+			],
+			[
+				"_entity",
+				"_entityid"
+			],
+			[
+				"BA",
+				"BASE_LOG_DIR"
+			],
+			[
+				"post",
+				"post_main"
+			],
+			[
+				"loin",
+				"login_done_url"
+			],
+			[
+				"entity_",
+				"entity_uri"
+			],
+			[
+				"ns",
+				"ns_pref"
+			],
+			[
+				"Record",
+				"RecordField"
+			],
+			[
+				"type",
+				"type_id"
+			],
+			[
+				"coll",
+				"coll_id"
+			],
+			[
+				"url",
+				"url"
+			],
+			[
+				"site",
+				"site_dir_name"
+			],
+			[
+				"msg",
+				"msg_text"
+			],
+			[
+				"str_",
+				"str_to_bytes"
+			],
+			[
+				"redi",
+				"redirect_uri"
+			],
+			[
+				"ser",
+				"serverlogfile"
+			],
+			[
+				"json",
+				"json_data"
+			],
+			[
+				"jso",
+				"json_data"
+			],
+			[
+				"attr",
+				"attr_val"
+			],
+			[
+				"is",
+				"isinstance"
+			],
+			[
+				"test",
+				"testelem"
+			],
+			[
+				"assert",
+				"assertEqual"
+			],
+			[
+				"expec",
+				"expect_content"
+			],
+			[
+				"tag",
+				"tagattrs"
+			],
+			[
+				"act",
+				"action_values"
+			],
+			[
+				"action",
+				"action_values"
+			],
+			[
+				"con",
+				"content"
+			],
+			[
+				"iter",
+				"iteritems"
+			],
+			[
+				"as",
+				"as"
+			],
+			[
+				"user",
+				"userconfig"
+			],
+			[
+				"HTT",
+				"HTTPConnection"
+			],
+			[
+				"pro",
+				"provider_label"
+			],
+			[
+				"uni",
+				"unicode_str"
+			],
+			[
+				"_en",
+				"_entityfile"
+			],
+			[
+				"IN",
+				"INSTALLED_APPS"
+			],
+			[
+				"i",
+				"installcollection"
+			],
+			[
+				"DATA",
+				"DATABASE_PATH"
+			],
+			[
+				"providers",
+				"providersdir"
+			],
+			[
+				"database",
+				"databasedir"
+			],
+			[
+				"sett",
+				"settingsdir"
+			],
+			[
+				"annalist",
+				"annalist-manager"
+			],
+			[
+				"resource",
+				"resource_ref"
+			],
+			[
+				"resou",
+				"resource_ref"
+			],
+			[
+				"reso",
+				"resource_file"
+			],
+			[
+				"err",
+				"err_head"
+			],
+			[
+				"typ",
+				"type_id"
+			],
+			[
+				"if",
+				"ifmain\tif __name__ == '__main__'"
+			],
+			[
+				"django",
+				"django_user"
+			],
+			[
+				"client_",
+				"client_secret"
+			],
+			[
+				"provider",
+				"provider_data"
+			],
+			[
+				"prof",
+				"provider_file"
+			],
+			[
+				"ga",
+				"gainpershare"
+			],
+			[
+				"shares",
+				"sharesforgain"
+			],
+			[
+				"orig",
+				"orig_type_id"
+			],
+			[
+				"edit",
+				"edittype"
+			],
+			[
+				"De",
+				"Default_type"
+			],
+			[
+				"orig_",
+				"orig_id"
+			],
+			[
+				"record",
+				"record_type"
+			],
+			[
+				"test_",
+				"test_view_id"
+			],
+			[
+				"orig_ty",
+				"orig_type_id"
+			],
+			[
+				"type_",
+				"type_type_id"
+			],
+			[
+				"lab",
+				"label_delete"
+			],
+			[
+				"gro",
+				"group_delete_label"
+			],
+			[
+				"grou",
+				"group_add_label"
+			],
+			[
+				"group",
+				"group_add_label"
+			],
+			[
+				"label_",
+				"label_add"
+			],
+			[
+				"field_v",
+				"field_value"
+			],
+			[
+				"co",
+				"context_dict"
+			],
+			[
+				"fiel",
+				"field_desc"
+			],
+			[
+				"group_",
+				"group_field_desc"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "pages/static/js/recipe.js",
+			"settings":
+			{
+				"buffer_size": 3187,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "pages/recipe/recipe.html",
+			"settings":
+			{
+				"buffer_size": 1711,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				""
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"mdp",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mar",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"so",
+				"Sort Lines (Case Sensitive)"
+			],
+			[
+				"md",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"ma",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"pack",
+				"Package Control: List Packages"
+			],
+			[
+				"pc",
+				"Package Control: Install Package"
+			],
+			[
+				"pci",
+				"Package Control: Install Package"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Discover Packages"
+			],
+			[
+				"git",
+				"GitGutter: Compare Against HEAD"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"mb",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"m",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"lo",
+				"Convert Case: Lower Case"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"li",
+				"Line Endings Unify"
+			],
+			[
+				"indent",
+				"Auto indent"
+			],
+			[
+				"Cont",
+				"Package Control: Install Package"
+			],
+			[
+				"side",
+				"Side Bar: Enable Syncing"
+			],
+			[
+				"sid",
+				"Side Bar: Enable Syncing"
+			],
+			[
+				"",
+				"Package Control: Install Package"
+			],
+			[
+				"file copy",
+				"File: Copy as Tag a"
+			],
+			[
+				"mpb",
+				"Markdown Preview: preview in Browser"
+			]
+		],
+		"width": 412.0
+	},
+	"console":
+	{
+		"height": 125.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = '2915d1851351e5ee549c20394736b442' + '8bc59f460fa1548d1514676163dafc88'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/graham/workspace/github/gklyne/annalist",
+		"/Users/graham/annalist_site",
+		"/Users/graham/annalist_site/c"
+	],
+	"file_history":
+	[
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/urls.py",
+		"/Users/graham/annalist_site/annalist.log",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_site/urls.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_site/settings/personal.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/statichack.py",
+		"/Users/graham/workspace/github/gklyne/annalist/anenv2/lib/python2.7/site-packages/Annalist-0.5.15-py2.7.egg/annalist_root/annalist/views/statichack.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist-access.log",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/generic.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_site/settings/devel.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_site/settings/personal_debug.py",
+		"/Users/graham/annalist_site/c/Linked_recipes/pages/recipe/index.html",
+		"/Users/graham/workspace/github/gklyne/annalist/anenv2/lib/python2.7/site-packages/django/core/files/storage.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/entitylist.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/setup.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/requirements/common.txt",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist.log",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/collection.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/fields/render_uri_link.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_recordvocab.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/collectionentitycache.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/objectcache.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_site/settings/runtests.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/collectionfieldcache.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/collectiontypecache.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/build/lib/annalist_root/annalist/tests/test_recordvocab.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_collectionvocabcache.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/entity_testvocabdata.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/message.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/collection.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_fieldrendering.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entitygenericlist.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entityinheritlist.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/entity_testlistdata.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_recordfield.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/entity_testviewdata.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_recordview.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/entity_testfielddesc.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/entity_testsitedata.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_sitedata.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_field/Entity_ref/field_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_site/settings/common.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/gunicorn_server.sh",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_manager/am_runserver.py",
+		"/Users/graham/workspace/github/gklyne/annalist/documents/TODO.md",
+		"/Users/graham/workspace/github/gklyne/annalist/documents/notes/20190327-threading-caching-notes.md",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/closurecache.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_enum_render_type/EntityRef/enum_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/fields/find_renderers.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/fields/render_select.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_collectiontypecache.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/recordvocab.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/init_tests.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/collectionvocabcache.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entitygenericview.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entitygenericedit.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entityenum.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entityeditenumfield.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entityeditdupfield.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entitydelete.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entitydefaultlist.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entitydata.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entity_subtype_selection.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entity.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_data_migration.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_entitydefaultedit.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/collectiondata.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/entitytypeinfo.py",
+		"/Users/graham/workspace/github/gklyne/annalist/documents/release-preparation.md",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/entity.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/entityfinder.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/entityroot.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/recordtype.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/recordfield.py",
+		"/Users/graham/annalist_site/annalist-wsgi-error.log.20190322",
+		"/Users/graham/annalist_site/annalist-wsgi-error.log",
+		"/Users/graham/workspace/github/gklyne/annalist/src/newkit_to_annalist_net.sh",
+		"/Users/graham/workspace/github/gklyne/annalist/src/newkit_to_conina_ubuntu.sh",
+		"/Users/graham/workspace/github/gklyne/annalist/src/newkit_to_annalist_dev.sh",
+		"/Users/graham/workspace/github/gklyne/annalist/src/newkit_to_annalist_bionic.sh",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_view/Info_view/view_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/templates/base_generic.html",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_info/Sitemap_initial/info_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_info/Contact_initial/info_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_info/Sitemap/info_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/entityedit.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/entityresourceaccess.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/entityresource.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/displayinfo.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/util.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/site.py",
+		"/Users/graham/annalist_site/c/_annalist_site/d/_info/About_initial/info_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_info/About_initial/info_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_info/Contact/info_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_enum_render_type/Markdown/enum_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/fields/render_text_markdown.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/field_rendering_support.py",
+		"/Users/graham/annalist_site/c/_annalist_site/d/_info/About/info_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_manager/am_createsite.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/login/login_message.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/login/login_utils.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/login/auth_oidc_client.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_info/About/info_meta.jsonld",
+		"/Users/graham/annalist_site/c/_annalist_site/d/_view/Info_view/view_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/layout.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/login/auth_django_client.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_type/_info/type_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_list/Info_list/list_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/sitedata/_info/_initial_values/info_meta.jsonld",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/recordinfo.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/identifiers.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/identity_providers/images/Login_GitHub.svg",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/login/ notes.md",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/login/OAuth2CheckBackend.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/models/rendertypeinfo.py",
+		"/Users/graham/.annalist/providers/github_oauth2_client_secrets_localhost.json",
+		"/Users/graham/workspace/github/gklyne/annalist/src/MANIFEST.in",
+		"/Users/graham/workspace/github/gklyne/annalist/documents/installing-annalist.md",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/identity_providers/github_oauth2_client_secrets.json.example",
+		"/Users/graham/workspace/github/gklyne/annalist/src/restart-annalist.sh",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/config_examples/annalist-le-ssl.conf.apache_example",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/data/config_examples/annalist.conf.apache_example",
+		"/Users/graham/workspace/github/gklyne/annalist/src/update-annalist-software.sh",
+		"/Users/graham/workspace/github/gklyne/annalist/src/update-run-annalist.sh",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/fields/render_fieldvalue.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/tests/test_render_text_language.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/fields/bound_field.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/fields/render_bool_checkbox.py",
+		"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist/views/fields/render_text_language.py"
+	],
+	"find":
+	{
+		"height": 39.0
+	},
+	"find_in_files":
+	{
+		"height": 101.0,
+		"where_history":
+		[
+			"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_site/settings",
+			"/Users/graham/workspace/github/gklyne/annalist",
+			"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist_site",
+			"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist,*.py",
+			"/Users/graham/workspace/github/gklyne/annalist/src/annalist_root/annalist"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"var",
+			"cols",
+			"cols_promise",
+			"jsonprep",
+			"id",
+			"jsonresource",
+			"absolute_path",
+			"path",
+			"BASE_DATA_DIR",
+			"STATIC_SEG",
+			".DEBUG",
+			"DEBUG",
+			"settings.DEBUG",
+			"static",
+			"read_annalist_resource",
+			"../",
+			"HttpResponse",
+			"resource_response",
+			"EntityResourceAccess",
+			"form_render",
+			"HttpResponseRedirect",
+			"recipe_cols",
+			"read_cols",
+			"recipe_cols",
+			"allocte_steps",
+			"read_cols",
+			"xx",
+			"src=\"",
+			"\"js/",
+			"css/"
+		],
+		"highlight": false,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "pages/static/js/recipe.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3187,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1145,
+								1145
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 182.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "pages/recipe/recipe.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1711,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1479,
+								1479
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 24.0
+	},
+	"input":
+	{
+		"height": 38.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 229.0
+	},
+	"output.markdown":
+	{
+		"height": 112.0
+	},
+	"output.mdpopups":
+	{
+		"height": 0.0
+	},
+	"output.unsaved_changes":
+	{
+		"height": 112.0
+	},
+	"pinned_build_system": "",
+	"project": "Linked_recipes.sublime-project",
+	"replace":
+	{
+		"height": 44.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"_exists",
+				"django/docs/_ext/literals_to_xrefs.py"
+			],
+			[
+				"656",
+				"annalist/presentations/media/annalist-demo-music-instrument-catalogue.screenflow/Media/A85E4415-B12C-4DB5-8546-72C506AF5B4B__F85CDFFF-A516-4002-9DFD-E5630A560A80.scc"
+			],
+			[
+				"",
+				"annalist/ASSUMPTIONS.md"
+			],
+			[
+				"1093",
+				"annalist/presentations/media/annalist-demo-music-instrument-catalogue.screenflow/Media/A85E4415-B12C-4DB5-8546-72C506AF5B4B__F85CDFFF-A516-4002-9DFD-E5630A560A80.scc"
+			],
+			[
+				"412",
+				"annalist/anenv/lib/python2.7/site-packages/rdflib-4.0.1-py2.7.egg-info/dependency_links.txt"
+			],
+			[
+				"iaevminim",
+				"src/iaeval/ro_minim.py"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"/usr/workspace/asqc.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 700.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 312.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
