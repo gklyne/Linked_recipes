@@ -52,6 +52,6 @@
     }
   ],
   "lr:vessel": "Use large pan to which other ingredients can be added",
-  "rdfs:comment": "# Kegeree\r\n\r\nThis is based on a recipe by Jamie Oliver, collected for our family recipe collection by Mandy Klyne.\r\n\r\n",
+  "rdfs:comment": "# Kegeree\r\n\r\nThis is based on a recipe by Jamie Oliver, collected for our family recipe collection by Mandy Klyne.\r\n\r\nView recipe diagram [here]($PAGE:recipe/recipe.html?id=$entity_id).\r\n\r\n",
   "rdfs:label": "Kedgeree"
 }

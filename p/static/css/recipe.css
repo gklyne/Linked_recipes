@@ -1,0 +1,142 @@
+/* CSS for recipe displkay */
+
+div.recipe-diagram {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    min-width: 60rem;
+}
+
+div.recipe-headers {
+    display: table-header-group ;
+}
+
+div.recipe-body {
+    display: table-row-group ;
+}
+
+div.recipe-spacer {
+    display: block;
+    height: 0.5rem;
+}
+
+div.recipe-row {
+    display: table-row;
+}
+
+span.col-time {
+    display: table-cell;
+    width: 3rem;
+}
+
+span.col-process {
+    display: table-cell;
+    min-width: 12rem;
+}
+
+span.col-ingredient {
+    display: table-cell;
+    min-width: 10rem;
+}
+
+span.recipe-preparation {
+    display: table-cell;
+    font-weight: bold;
+}
+
+span.recipe-vessel {
+    display: table-cell;
+    font-style: italic;
+}
+
+span.recipe-heading {
+    font-weight: bold;
+}
+
+span.recipe-step {
+    display: table-cell;
+    padding: 0.2rem;
+    /* @@@@ */
+}
+
+span.recipe-end {
+    display: table-cell;
+    font-style: italic;
+}
+
+span.recipe-skip {
+    display: table-cell;
+    visibility: hidden;
+}
+
+/*
+div.grid-row {
+    display: block;
+}
+*/
+
+span.grid-track {
+    display: inline;
+}
+
+span.grid-body {
+    display: inline;
+}
+
+span.grid-track::before {
+    display: inline;
+    content: " || ";
+}
+
+span.grid-cell {
+    display: inline;
+}
+
+
+/*
+
+            <div class="recipe-row">
+                <span class="col-time">Time</span>
+                <span class="col-process recipe-preparation">Kedgeree</span>
+                <span class="col-process recipe-preparation">Onion, ginger, etc.</span>
+                <span class="col-process recipe-preparation">Poached fish</span>
+                <span class="col-process recipe-preparation">Eggs</span>
+            </div>
+            <div class="recipe-row">
+                <span class="col-time"></span>
+                <span class="col-process recipe_vessel">Kedgeree</span>
+                <span class="col-process recipe_vessel">Onion, ginger, etc.</span>
+                <span class="col-process recipe_vessel">Poached fish</span>
+                <span class="col-process recipe_vessel">Eggs</span>
+            </div>
+        </div>
+        <div class="recipe-body">
+            <div class="recipe-row">
+                <span class="col-time">20</span>
+                <span class="col-process recipe_step">@@@</span>
+                <span class="col-process recipe_step">@@@</span>
+                <span class="col-process recipe_step">@@@</span>
+                <span class="col-process recipe_step">@@@</span>
+            </div>
+
+            <div class="recipe-row">
+                <span class="col-time">@@@</span>
+                <span class="col-process recipe_skip">@@@</span>
+                <span class="col-process recipe_skip">@@@</span>
+                <span class="col-process recipe_skip">@@@</span>
+                <span class="col-process recipe_skip">@@@</span>
+            </div>
+
+*/
+
+
+
+/* display: table                /* <table>     */
+/* display: table-cell           /* <td>        */
+/* display: table-row            /* <tr>        */
+/* display: table-column         /* <col>       */
+/* display: table-column-group   /* <colgroup>  */
+/* display: table-footer-group   /* <tfoot>     */
+/* display: table-header-group   /* <thead>     */
+
+

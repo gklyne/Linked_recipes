@@ -5,4 +5,8 @@
 # Data model experiments for linked recipes
 
 
+# TODO
+
+- [ ] Check out data model for https://wiki.gnome.org/Apps/Recipes
+
 
