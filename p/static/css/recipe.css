@@ -1,5 +1,6 @@
 /* CSS for recipe displkay */
 
+/* General structure */
 div.recipe-diagram {
     display: table;
     table-layout: fixed;
@@ -24,49 +25,131 @@ div.recipe-row {
     display: table-row;
 }
 
+/* Column for time values */
 span.col-time {
     display: table-cell;
     width: 3rem;
 }
 
+/* Column for preparation (sequence of steps) */
 span.col-process {
     display: table-cell;
     min-width: 12rem;
 }
 
+/* Column for base ingredients */
 span.col-ingredient {
     display: table-cell;
     min-width: 10rem;
 }
 
+span.time-slot {
+    border-top: solid lightgray ;
+    border-top-width: 1px;
+}
+
+/* Heading cell for preparation - name of preparation */
 span.recipe-preparation {
     display: table-cell;
     font-weight: bold;
 }
 
+/* Cell for vessel (pan) for preparation */
 span.recipe-vessel {
     display: table-cell;
     font-style: italic;
 }
 
+/* Cell for general column header */
 span.recipe-heading {
     font-weight: bold;
 }
 
+/* Cell for start of sub-preparation */
+span.recipe-prep-start {
+    display: table-cell;
+    padding: 0.2rem;
+    padding-top: 6mm;
+    padding-left: 6mm;
+    background-image: url(../images/prep-start.png);
+    background-repeat: no-repeat;
+    background-position: bottom -4.0mm left -0.2mm;
+    background-clip: border-box;
+}
+
+/* Cell for step in preparation */
 span.recipe-step {
     display: table-cell;
     padding: 0.2rem;
-    /* @@@@ */
+    padding-left: 6mm;
+    background-image: url(../images/prep-step.png);
+    background-repeat: no-repeat;
+    background-position: bottom -1.6mm left ;
+    background-clip: border-box;
+}
+
+/* Cell for pass in preparation (nothing to do in the current row) */
+span.recipe-pass {
+    display: table-cell;
+    padding-left: 6mm;
+    background-image: url(../images/prep-step.png);
+    background-repeat: no-repeat;
+    background-position: center left ;
+    background-clip: border-box;
+}
+
+/* Unused/empty cell */
+span.recipe-skip {
+    display: table-cell;
+    /*visibility: hidden;*/
+}
+
+/* Cell for end of sub-preparation (turn to merge left) */
+span.recipe-prep-end {
+    display: table-cell;
+    padding: 0.2rem;
+    padding-left: 6mm;
+    padding-bottom: 2mm;
+    background-image: url(../images/sub-prep-end.png);
+    background-repeat: no-repeat;
+    background-position: bottom 0.12mm left -2.4mm ;
+    background-clip: border-box;
+}
+
+/* Cell for connecting sub-preparation accross to target preparation */
+span.recipe-prep-across {
+    display: table-cell;
+    padding: 0.2rem;
+    padding-left: 6mm;
+    padding-bottom: 6mm;
+    background-image: url(../images/sub-prep-across.png);
+    background-repeat: no-repeat;
+    background-position: bottom -6mm left -10mm ;
+    background-clip: border-box;
+}
+
+/* Cell for merging sub-preparation accross to target preparation */
+span.recipe-prep-merge {
+    display: table-cell;
+    padding: 0.2rem;
+    padding-left: 6mm;
+    padding-bottom: 6mm;
+    background-image: url(../images/sub-prep-merge.png);
+    background-repeat: no-repeat;
+    background-position: bottom -6mm left  ;
+    background-clip: border-box;
 }
 
 span.recipe-end {
     display: table-cell;
     font-style: italic;
-}
-
-span.recipe-skip {
-    display: table-cell;
-    visibility: hidden;
+    padding: 0.2rem;
+    padding-left: 6mm;
+    padding-bottom: 4mm;   
+    background-image: url(../images/prep-end.png);
+    background-repeat: no-repeat;
+    background-position: bottom -1.6mm left -0.4mm ;
+    background-clip: border-box;
 }
 
 /*
