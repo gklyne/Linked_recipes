@@ -5,17 +5,17 @@
     },
     "../../coll_context.jsonld"
   ],
-  "@id": "PreparationStep/Peel_eggs",
+  "@id": "PreparationStep/Kedgeree_fry",
   "@type": [
     "lr:PreparationStep",
     "annal:EntityData"
   ],
-  "annal:id": "Peel_eggs",
+  "annal:id": "Kedgeree_fry",
   "annal:type": "lr:PreparationStep",
   "annal:type_id": "PreparationStep",
   "lr:step_duration": "5",
   "lr:step_ingredient": [],
-  "lr:step_process": "",
-  "rdfs:comment": "# Peel eggs",
-  "rdfs:label": "Peel eggs"
+  "lr:step_process": "Process/Medium_heat",
+  "rdfs:comment": "# Fry mixture\r\n\r\nRaise heat to medium, fry for a few minutes",
+  "rdfs:label": "Fry mixture"
 }

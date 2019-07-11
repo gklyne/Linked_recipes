@@ -14,20 +14,29 @@
   "annal:id": "Kedgeree",
   "annal:type": "lr:PreparedFood",
   "annal:type_id": "PreparedFood",
-  "lr:prep_hold_duration": "10",
+  "lr:prep_hold_duration": "0",
   "lr:prep_quantity": "Quantity/2_servings",
   "lr:prep_steps": [
     {
-      "lr:prep_step": "PreparationStep/Kedgeree_boil_rice"
+      "lr:prep_step": "PreparationStep/Kedgeree_heat_butterghee"
     },
     {
-      "lr:prep_step": "PreparationStep/Kedgeree_wash_rice"
+      "lr:prep_step": "PreparationStep/Soften_garlic_ginger_onion"
     },
     {
-      "lr:prep_step": "PreparationStep/Kedgeree_warm_rice"
+      "lr:prep_step": "PreparationStep/Kedgeree_curry_mustard"
     },
     {
-      "lr:prep_step": "PreparationStep/Kedgeree_add_onion_etc"
+      "lr:prep_step": "PreparationStep/Kedgeree_heat_curry"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_add_tomato"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_lemon_juice"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_add_rice"
     },
     {
       "lr:prep_step": "PreparationStep/Kedgeree_warm_mix"
@@ -39,19 +48,16 @@
       "lr:prep_step": "PreparationStep/Kedgeree_warm_mix"
     },
     {
-      "lr:prep_step": "PreparationStep/Kedgeree_add_eggs"
-    },
-    {
-      "lr:prep_step": "PreparationStep/Kedgeree_warm_mix"
-    },
-    {
       "lr:prep_step": "PreparationStep/Kedgeree_add_coriander"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_add_eggs"
     },
     {
       "lr:prep_step": "PreparationStep/Kedgeree_serve"
     }
   ],
-  "lr:vessel": "Use large pan to which other ingredients can be added",
-  "rdfs:comment": "# Kegeree\r\n\r\nThis is based on a recipe by Jamie Oliver, collected for our family recipe collection by Mandy Klyne.\r\n\r\nView recipe diagram [here]($PAGE:recipe/recipe.html?id=$entity_id).\r\n\r\n",
+  "lr:vessel": "Large pan (to hold final result)",
+  "rdfs:comment": "# Kedgeree\r\n\r\nThis is based on a recipe by Jamie Oliver, collected for our family recipe collection by Mandy Klyne.\r\n\r\nView recipe diagram [here]($PAGE:recipe/recipe.html?id=$entity_id).\r\n\r\n",
   "rdfs:label": "Kedgeree"
 }

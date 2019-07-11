@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_list/FoodStuff",
+  "@type": [
+    "annal:List"
+  ],
+  "annal:default_type": "_type/FoodStuff",
+  "annal:default_view": "_view/FoodStuff",
+  "annal:display_type": "List",
+  "annal:id": "FoodStuff",
+  "annal:list_entity_selector": "'lr:FoodStuff' in [@type]",
+  "annal:list_entity_type": "lr:FoodStuff",
+  "annal:list_fields": [
+    {
+      "annal:field_id": "_field/Entity_id",
+      "annal:field_placement": "small:0,3"
+    },
+    {
+      "annal:field_id": "_field/Entity_label",
+      "annal:field_placement": "small:3,9"
+    }
+  ],
+  "annal:type": "annal:List",
+  "annal:type_id": "_list",
+  "annal:uri": "annal:display/Default_list",
+  "rdfs:comment": "# Any foodstuff list\n\nList entities of type [Any foodstuff]($BASE:_type/FoodStuff).",
+  "rdfs:label": "Any foodstuff list"
+}

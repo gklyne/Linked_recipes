@@ -14,7 +14,7 @@
   "annal:id": "Kedgeree_eggs",
   "annal:type": "lr:PreparedFood",
   "annal:type_id": "PreparedFood",
-  "lr:prep_hold_duration": "30",
+  "lr:prep_hold_duration": "15",
   "lr:prep_quantity": "Quantity/2_servings",
   "lr:prep_steps": [
     {

@@ -13,7 +13,7 @@
   "annal:id": "Kedgeree_add_coriander",
   "annal:type": "lr:PreparationStep",
   "annal:type_id": "PreparationStep",
-  "lr:step_duration": "",
+  "lr:step_duration": "1",
   "lr:step_ingredient": [
     {
       "@id": "StepIngredient/1_handful_coriander"

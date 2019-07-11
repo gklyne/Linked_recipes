@@ -26,6 +26,6 @@
     }
   ],
   "lr:step_process": "Process/Low_heat",
-  "rdfs:comment": "# Soften garlic, ginger and onion",
+  "rdfs:comment": "# Soften garlic, ginger and onion\r\n\r\nFry for a few minutes.",
   "rdfs:label": "Soften garlic, ginger and onion"
 }

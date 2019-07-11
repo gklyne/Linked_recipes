@@ -16,6 +16,6 @@
   "lr:step_ingredient_food": "FoodStuff/Water",
   "lr:step_ingredient_form": "Cold or warm",
   "lr:step_ingredient_quantity": "Quantity/750_ml",
-  "rdfs:comment": "# Kedgeree rice water",
-  "rdfs:label": "Kedgeree rice water"
+  "rdfs:comment": "# Water (for rice)",
+  "rdfs:label": "Water (for rice)"
 }

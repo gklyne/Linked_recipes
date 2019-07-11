@@ -1,4 +1,16 @@
-/* CSS for recipe displkay */
+/* CSS for recipe display */
+
+div.info {
+    color: green;
+    background-color: lightgrey;
+    padding: 0.5rem;
+}
+
+div.error {
+    color: red;
+    background-color: lightgrey;
+    padding: 0.5rem;
+}
 
 /* General structure */
 div.recipe-diagram {

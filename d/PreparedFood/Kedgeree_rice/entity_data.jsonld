@@ -1,0 +1,33 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "PreparedFood/Kedgeree_rice",
+  "@type": [
+    "lr:PreparedFood",
+    "lr:FoodStuff",
+    "annal:EntityData"
+  ],
+  "annal:id": "Kedgeree_rice",
+  "annal:type": "lr:PreparedFood",
+  "annal:type_id": "PreparedFood",
+  "lr:prep_hold_duration": "20",
+  "lr:prep_quantity": "Quantity/2_servings",
+  "lr:prep_steps": [
+    {
+      "lr:prep_step": "PreparationStep/Boil_rice_water"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_boil_rice"
+    },
+    {
+      "lr:prep_step": "PreparationStep/Kedgeree_wash_rice"
+    }
+  ],
+  "lr:vessel": "Saucepan",
+  "rdfs:comment": "# Kegeree rice\r\n",
+  "rdfs:label": "Kedgeree rice"
+}

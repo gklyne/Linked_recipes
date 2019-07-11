@@ -13,9 +13,9 @@
   "annal:id": "Kedgeree_rice",
   "annal:type": "lr:StepIngredient",
   "annal:type_id": "StepIngredient",
-  "lr:step_ingredient_food": "BaseIngredient/Basmati_rice",
-  "lr:step_ingredient_form": "Dry",
-  "lr:step_ingredient_quantity": "Quantity/170_grams",
+  "lr:step_ingredient_food": "PreparedFood/Kedgeree_rice",
+  "lr:step_ingredient_form": "Boiled",
+  "lr:step_ingredient_quantity": "Quantity/2_servings",
   "rdfs:comment": "# Kedgeree rice",
   "rdfs:label": "Kedgeree rice"
 }

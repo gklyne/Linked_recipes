@@ -5,17 +5,17 @@
     },
     "../../coll_context.jsonld"
   ],
-  "@id": "PreparationStep/Peel_eggs",
+  "@id": "PreparationStep/Boil_rice_water",
   "@type": [
     "lr:PreparationStep",
     "annal:EntityData"
   ],
-  "annal:id": "Peel_eggs",
+  "annal:id": "Boil_rice_water",
   "annal:type": "lr:PreparationStep",
   "annal:type_id": "PreparationStep",
   "lr:step_duration": "5",
   "lr:step_ingredient": [],
-  "lr:step_process": "",
-  "rdfs:comment": "# Peel eggs",
-  "rdfs:label": "Peel eggs"
+  "lr:step_process": "Process/Process_boil",
+  "rdfs:comment": "# Boil rice water\r\n\r\nBoil about 750ml of lightly salted water.",
+  "rdfs:label": "Boil rice water"
 }

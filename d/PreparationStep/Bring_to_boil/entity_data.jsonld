@@ -13,7 +13,7 @@
   "annal:id": "Bring_to_boil",
   "annal:type": "lr:PreparationStep",
   "annal:type_id": "PreparationStep",
-  "lr:step_duration": "",
+  "lr:step_duration": "5",
   "lr:step_ingredient": [],
   "lr:step_process": "Process/Process_boil",
   "rdfs:comment": "# Bring to boil",

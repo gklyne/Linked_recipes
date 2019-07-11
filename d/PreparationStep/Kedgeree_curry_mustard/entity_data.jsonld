@@ -13,7 +13,7 @@
   "annal:id": "Kedgeree_curry_mustard",
   "annal:type": "lr:PreparationStep",
   "annal:type_id": "PreparationStep",
-  "lr:step_duration": "0",
+  "lr:step_duration": "1",
   "lr:step_ingredient": [
     {
       "@id": "StepIngredient/Kedgeree_curry_powder"

@@ -13,7 +13,7 @@
   "annal:id": "Fish_remove_skin",
   "annal:type": "lr:PreparationStep",
   "annal:type_id": "PreparationStep",
-  "lr:step_duration": "",
+  "lr:step_duration": "2",
   "lr:step_ingredient": [],
   "lr:step_process": "",
   "rdfs:comment": "# Remove skin from fish",
