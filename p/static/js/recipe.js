@@ -48,11 +48,7 @@ var recipe = {
             }
         }
         let grid = recipe.get_recipe_grid(preps)
-
-
-        // recipe.allocate_rows(cols)
-        // recipe.allocate_steps(cols)
-        // recipe.draw_grid(step_grid)
+        recipe.draw_grid(grid)
     },
 
     get_step_times: function(prep_ref, end_time, merge_to) {
@@ -152,7 +148,7 @@ var recipe = {
         function pop_col(col_num) {
             // Advance step in preparation
             // returns null if reached end of preparation.
-            col_step_num = ++head_pos[col_num]
+            let col_step_num = ++head_pos[col_num]
             if (col_step_num < preps[col_num].prep_steps.length) {
                 head_steps[col_num] = preps[col_num].prep_steps[col_step_num]
             } else {
@@ -176,7 +172,7 @@ var recipe = {
             , rows:     []
             , row_init:
                 { time: -1
-                , cols: preps.map( prep => null )   # Init row withh null grid values
+                , cols: preps.map( prep => null )   // Init row withh null grid values
                 }
             }
         let [next_step_col, next_step_time, next_step] = head_steps.reduce(
@@ -184,11 +180,12 @@ var recipe = {
             )
         while (next_step) {
             recipe.add_to_grid(grid, next_step_col, next_step)
-            pop_col(next_step_col)            
+            pop_col(next_step_col); // Semicolon here is required!
             [next_step_col, next_step_time, next_step] = head_steps.reduce(
                 choose_next_step, [-1, -1, null]
                 )
         }
+        return grid
     },
 
     add_to_grid: function(grid, step_col, add_step) {
@@ -202,8 +199,8 @@ var recipe = {
         // care may be needed to ensure that multiple sub-preparations added at the same 
         // time do actually render properly.
         //
-        // @@TODO: initial implementation places each step on its own row: look into combining
-        //         roes to make presentation more compact.
+        // @@TODO: initial implementation places each step on its own row: look into 
+        //         combining rows to make presentation more compact.
         //
         // grid         the grid under construction
         // step_col     the column number in which the next step is added
@@ -213,17 +210,98 @@ var recipe = {
         //                  , step_duration:    -- duration of step
         //                  }
         console.log("recipe.add_to_grid[%s,%s]: %s", add_step.step_time, step_col, add_step.step_ref)
-
-        @@@@
-
+        let new_row  = grid.row_init
+        new_row.time = add_step.step_time
+        new_row.cols[step_col] = add_step
+        grid.rows.push(new_row)
     },
 
-    // allocate_steps: function(cols) {
-    //     console.log("recipe.allocate_steps")
-    // },
-
-    draw_grid: function(step_grid) {
+    draw_grid: function(grid) {
+        // Assemble grid as HTML table
         console.log("recipe.draw_grid")
+        recipe.reset_grid()
+        recipe.insert_grid_headers(grid.cols)
+        recipe.insert_grid_start(grid)
+        for (let row of grid.rows) {
+            recipe.insert_grid_row(grid, row)
+        }
+        recipe.insert_grid_end(grid)
+    },
+
+    reset_grid: function() {
+        console.log("recipe.reset_grid")
+        jQuery("div.recipe-diagram").html("")
+    },
+
+    insert_grid_headers: function(cols) {
+        console.log("recipe.insert_grid_headers")
+        let elem_head = jQuery(`
+            <div class="recipe-headers">
+                <div class="recipe-row">
+                    <span class="col-time recipe-heading">Time</span>
+                    <span class="col-ingredient recipe-heading">Ingredient</span>
+                </div>
+                <div class="recipe-row">
+                    <span class="col-time recipe-vessel"></span>
+                    <span class="col-ingredient recipe-vessel"></span>
+                </div>
+                <div class="recipe-spacer"></div>
+            </div>
+            `)
+
+        // let next_col      = 
+        //     { prep_ref:         prep_ref
+        //     , prep_end_time:    end_time    // End of hold period
+        //     , prep_merge:       merge_to
+        //     , prep_steps:       []
+        //     }
+
+        for (let col of cols) {
+            // Get prep details
+            let col_prep = recipe.get_annalist_resource(col.prep_ref)
+            // Add coll to headers
+            let elem_prep_col   = jQuery(`
+                <span class="col-process recipe-preparation">${col_prep["rdfs:label"]}</span>
+                `)
+            let elem_vessel_col = jQuery(`
+                <span class="col-process recipe-vessel">${col_prep["lr:vessel"]}</span>
+                `)
+            elem_head.find("span.col-ingredient.recipe-heading").before(elem_prep_col)
+            elem_head.find("span.col-ingredient.recipe-vessel").before(elem_vessel_col)
+        }
+        jQuery("div.recipe-diagram").html(elem_head)
+
+        // <div class="recipe-headers">
+        //     <div class="recipe-row">
+        //         <span class="col-time recipe-heading">Time</span>
+        //         <span class="col-process recipe-preparation">Kedgeree</span>
+        //         <span class="col-process recipe-preparation">Rice</span>
+        //         <span class="col-process recipe-preparation">Poached fish</span>
+        //         <span class="col-process recipe-preparation">Eggs</span>
+        //         <span class="col-ingredient recipe-heading">Ingredient</span>
+        //     </div>
+        //     <div class="recipe-row">
+        //         <span class="col-time recipe-vessel"></span>
+        //         <span class="col-process recipe-vessel">Use large pan/wok, enough for final result</span>
+        //         <span class="col-process recipe-vessel">Saucepan for rice</span>
+        //         <span class="col-process recipe-vessel">Wide, shallow pan</span>
+        //         <span class="col-process recipe-vessel">Small saucepan</span>
+        //         <span class="col-ingredient recipe-vessel"></span>
+        //     </div>
+        //     <div class="recipe-spacer"></div>
+        // </div>
+    },
+
+    insert_grid_start: function(grid) {
+        console.log("recipe.insert_grid_start")
+    },
+
+    insert_grid_row: function(grid, row) {
+        console.log("recipe.insert_grid_row")
+    },
+
+    insert_grid_end: function(grid) {
+        console.log("recipe.insert_grid_end")
     },
 
     // Recipe element read functions
