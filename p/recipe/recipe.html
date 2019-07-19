@@ -5,12 +5,12 @@
     <title class="recipe-title">Recipe - Kedgeree</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../static/css/recipe.css"/>
 <!--
     <link rel="stylesheet" href="../static/foundation/css/foundation_reduced.css" />
     <link rel="stylesheet" href="../static/annalist/css/annalist.css" />
--->
-    <link rel="stylesheet" href="../static/css/recipe.css"/>
     <script src="../static/foundation/js/vendor/modernizr.js"></script>
+-->
 </head>
 
 <body>
@@ -34,15 +34,15 @@
         </div>
     </div>
     
-    <script src="../static/foundation/js/vendor/jquery.js"></script>
+    <script src="../static/js/jquery.js"></script>
     <!--  <script src="../static/{% static 'foundation/js/foundation.min.js' %}"></script> -->
-    <script src="../static/foundation/js/foundation/foundation.js"></script>
     <!--
+    <script src="../static/foundation/js/foundation/foundation.js"></script>
     <script src="../static/js/foundation/foundation.dropdown.js"></script>
     <script src="../static/js/foundation/foundation.topbar.js"></script>
     <script src="../static/js/foundation/foundation.alert.js"></script>
-    -->
     <script src="../static/annalist/js/annalist.js"></script>
+    -->
     <script src="../static/js/rdflib.min.js"></script>
     <script src="../static/js/recipe.js"></script>
     <script>
@@ -51,8 +51,8 @@
         const recipe_id = urlParams.get('id');
         const base_url  = new URL("../../d/", document.URL)
         console.log("Drawing recipe: %s from %s", recipe_id, base_url)
-        $(document).foundation();
-        annalist.resize_handler({});
+        // $(document).foundation();
+        // annalist.resize_handler({});
         recipe.draw(base_url, recipe_id)
     </script>
 

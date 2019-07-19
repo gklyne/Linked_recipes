@@ -462,9 +462,9 @@ var recipe = {
             elem_row.find("span.col-time").html(this_row.time.toString())
         }
         // Add ingredient(s)
-        for (ingr in ingr_refs) {
-            ....
-        }
+        // for (ingr in ingr_refs) {
+        //     ....
+        // }
 
 
 
