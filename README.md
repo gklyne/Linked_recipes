@@ -14,6 +14,7 @@
 - [x] Add ingredient(s) to step display
     - https://demo.annalist.net/annalist/c/Linked_recipes/p/recipe/recipe.html?id=Kedgeree_eggs
 - [x] Don't include holding time for main recipe
+- [ ] Only include raw ingredients (not sub-prep) in ingredients column
 - [ ] Get recipe description from data
     - h2.page-heading.recipe-title > p
 - [ ] Inconsistency in display of last step for sub-preparation

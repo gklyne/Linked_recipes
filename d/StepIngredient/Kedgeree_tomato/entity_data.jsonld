@@ -13,7 +13,7 @@
   "annal:id": "Kedgeree_tomato",
   "annal:type": "lr:StepIngredient",
   "annal:type_id": "StepIngredient",
-  "lr:step_ingredient_food": "FoodStuff/Tomato",
+  "lr:step_ingredient_food": "BaseIngredient/Tomato",
   "lr:step_ingredient_form": "Raw, chopped",
   "lr:step_ingredient_quantity": "Quantity/2_pieces",
   "rdfs:comment": "# Kedgeree tomato\r\n\r\nRecipe calls for deseeded and finely chopped.  I prefer to keep the seeds.\r\n",

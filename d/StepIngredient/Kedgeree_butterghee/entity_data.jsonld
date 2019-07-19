@@ -13,7 +13,7 @@
   "annal:id": "Kedgeree_butterghee",
   "annal:type": "lr:StepIngredient",
   "annal:type_id": "StepIngredient",
-  "lr:step_ingredient_food": "FoodStuff/Butterghee",
+  "lr:step_ingredient_food": "BaseIngredient/Butterghee",
   "lr:step_ingredient_form": "Solid",
   "lr:step_ingredient_quantity": "Quantity/1_knob",
   "rdfs:comment": "# Butter ghee\r\n\r\nButter ghee for kedgeree.  Could substitute butter of vegetable oil.",

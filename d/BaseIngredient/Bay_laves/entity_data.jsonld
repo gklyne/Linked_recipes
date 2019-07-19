@@ -5,14 +5,15 @@
     },
     "../../coll_context.jsonld"
   ],
-  "@id": "FoodStuff/Bay_laves",
+  "@id": "BaseIngredient/Bay_laves",
   "@type": [
+    "lr:BaseIngredient",
     "lr:FoodStuff",
     "annal:EntityData"
   ],
   "annal:id": "Bay_laves",
-  "annal:type": "lr:FoodStuff",
-  "annal:type_id": "FoodStuff",
+  "annal:type": "lr:BaseIngredient",
+  "annal:type_id": "BaseIngredient",
   "rdfs:comment": "Bay leaves",
   "rdfs:label": "Bay leaves"
 }

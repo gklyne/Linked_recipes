@@ -13,7 +13,7 @@
   "annal:id": "Kedgeree_garlic",
   "annal:type": "lr:StepIngredient",
   "annal:type_id": "StepIngredient",
-  "lr:step_ingredient_food": "FoodStuff/Garlic",
+  "lr:step_ingredient_food": "BaseIngredient/Garlic",
   "lr:step_ingredient_form": "Finely sliced or chopped",
   "lr:step_ingredient_quantity": "Quantity/1_clove",
   "rdfs:comment": "# Garlic\r\n\r\nFinely sliced or chopped",

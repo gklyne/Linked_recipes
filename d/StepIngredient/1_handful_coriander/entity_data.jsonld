@@ -13,7 +13,7 @@
   "annal:id": "1_handful_coriander",
   "annal:type": "lr:StepIngredient",
   "annal:type_id": "StepIngredient",
-  "lr:step_ingredient_food": "FoodStuff/Coriander",
+  "lr:step_ingredient_food": "BaseIngredient/Coriander",
   "lr:step_ingredient_form": "Chopped",
   "lr:step_ingredient_quantity": "Quantity/1_handful",
   "rdfs:comment": "# 1 handful coriander",

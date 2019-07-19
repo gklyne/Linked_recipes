@@ -476,8 +476,13 @@ var recipe = {
         let col_ingr = elem_row.find("span.col-ingredient")
         for (let ingr_ref of ingr_refs) {
             let ingr_data = recipe.get_annalist_resource(ingr_ref)
-            let elem_ingr = jQuery(`<p>${ingr_data["rdfs:label"]}</p>`)
-            col_ingr.append(elem_ingr)
+            let [ingr_type, ingr_id] = recipe.get_entity_type_id(
+                ingr_data["lr:step_ingredient_food"]
+                )
+            if (ingr_type == "BaseIngredient") {
+                let elem_ingr = jQuery(`<p>${ingr_data["rdfs:label"]}</p>`)
+                col_ingr.append(elem_ingr)                
+            }
         }
 
         // elem_row.find("span.col-ingredient").html(active_cols.toSource())

@@ -13,7 +13,7 @@
   "annal:id": "Kedgeree_smoked_haddock",
   "annal:type": "lr:StepIngredient",
   "annal:type_id": "StepIngredient",
-  "lr:step_ingredient_food": "FoodStuff/Smoked_haddock",
+  "lr:step_ingredient_food": "BaseIngredient/Smoked_haddock",
   "lr:step_ingredient_form": "Boned",
   "lr:step_ingredient_quantity": "Quantity/300_g",
   "rdfs:comment": "# Smoked haddock\r\n\r\nPreferably undied.",

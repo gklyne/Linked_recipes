@@ -13,7 +13,7 @@
   "annal:id": "Kedgeree_mustard_seeds",
   "annal:type": "lr:StepIngredient",
   "annal:type_id": "StepIngredient",
-  "lr:step_ingredient_food": "FoodStuff/Mustard_seeds",
+  "lr:step_ingredient_food": "BaseIngredient/Mustard_seeds",
   "lr:step_ingredient_form": "Whole seeds",
   "lr:step_ingredient_quantity": "Quantity/1_tbsp",
   "rdfs:comment": "# Kedgeree mustard seeds\r\n",

@@ -13,7 +13,7 @@
   "annal:id": "Kedgeree_curry_powder",
   "annal:type": "lr:StepIngredient",
   "annal:type_id": "StepIngredient",
-  "lr:step_ingredient_food": "FoodStuff/Curry_powder",
+  "lr:step_ingredient_food": "BaseIngredient/Curry_powder",
   "lr:step_ingredient_form": "Dry powder",
   "lr:step_ingredient_quantity": "Quantity/1_tbsp",
   "rdfs:comment": "# Curry powder\r\n\r\nI often add more then the recipe calls for.\r\n",

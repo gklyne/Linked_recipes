@@ -5,14 +5,15 @@
     },
     "../../coll_context.jsonld"
   ],
-  "@id": "FoodStuff/Ginger",
+  "@id": "BaseIngredient/Ginger",
   "@type": [
+    "lr:BaseIngredient",
     "lr:FoodStuff",
     "annal:EntityData"
   ],
   "annal:id": "Ginger",
-  "annal:type": "lr:FoodStuff",
-  "annal:type_id": "FoodStuff",
+  "annal:type": "lr:BaseIngredient",
+  "annal:type_id": "BaseIngredient",
   "rdfs:comment": "# Ginger\r\n\r\nRoot ginger, peeled.\r\n\r\n(According to Meera Sodha, most of the flavour in ginger is just under the skin, so use a spoon to scrape off just the skin without taking too much of the root itself.)\r\n\r\n",
   "rdfs:label": "Ginger (root)"
 }

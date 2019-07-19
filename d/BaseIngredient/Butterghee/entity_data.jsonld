@@ -5,14 +5,15 @@
     },
     "../../coll_context.jsonld"
   ],
-  "@id": "FoodStuff/Butterghee",
+  "@id": "BaseIngredient/Butterghee",
   "@type": [
+    "lr:BaseIngredient",
     "lr:FoodStuff",
     "annal:EntityData"
   ],
   "annal:id": "Butterghee",
-  "annal:type": "lr:FoodStuff",
-  "annal:type_id": "FoodStuff",
+  "annal:type": "lr:BaseIngredient",
+  "annal:type_id": "BaseIngredient",
   "rdfs:comment": "# Butter ghee",
   "rdfs:label": "Butter ghee"
 }
