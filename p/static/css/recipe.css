@@ -40,19 +40,19 @@ div.recipe-row {
 /* Column for time values */
 span.col-time {
     display: table-cell;
-    width: 3rem;
+    width: 3em;
 }
 
 /* Column for preparation (sequence of steps) */
 span.col-process {
     display: table-cell;
-    min-width: 12rem;
+    min-width: 10em;
 }
 
 /* Column for base ingredients */
 span.col-ingredient {
     display: table-cell;
-    min-width: 10rem;
+    min-width: 10em;
 }
 
 span.time-slot {

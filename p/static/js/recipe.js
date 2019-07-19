@@ -1,5 +1,7 @@
 'use strict';
 
+const RDFS = $rdf.Namespace("http://www.w3.org/2000/01/rdf-schema#")
+
 function entity_ids(entities) {
     // For logging: extract ids from list of entities
     return entities.map(entity => entity["annal:id"])
@@ -30,16 +32,21 @@ var recipe = {
     },
 
     output_recipe: function(recipe_id_cols) {
-        // Renderrecipe on web page.  This method is called with all required
-        // data loaded into the entity cache.
+        // Render recipe on web page.  This method is called with all required
+        // data loaded into the entity cache, and is entirely synchronous.
+        //
+        // The main logic for formatting a recipe is driven from here.
+        //
+        // recipe_id_cols is value returned by read_recipe (above)
         let recipe_id = recipe_id_cols[0]
         let cols      = recipe_id_cols[1]
         console.log("recipe.read_recipe resolved: %s -> [%s]", recipe_id, cols.join(","))
+        // Assemble column descriptions with step times
         let preps = recipe.get_step_times(cols[0], 0, null)
-        // See what we got
+        // See what we got (this is purely diagnostic)
         for (let prep of preps) {
             console.log("prep %s, merges to %s at %s ", 
-                prep.prep_ref, prep.prep_merge, prep.prep_end_time
+                prep.prep_ref, prep.prep_merge_to, prep.prep_end_time
                 )
             for (let step of prep.prep_steps) {
                 console.log("    step for %s, from %s for %s ", 
@@ -47,36 +54,83 @@ var recipe = {
                     )                
             }
         }
+        // Construct time-ordered row-by-row grid for recipe
         let grid = recipe.get_recipe_grid(preps)
+        // Render the assembled grid
         recipe.draw_grid(grid)
     },
 
     get_step_times: function(prep_ref, end_time, merge_to) {
+        // Calculate step timings for preparation, and create column and step 
+        // descriptions to be used in the display grid.  The returned data is
+        // organized primarily by columns.
+        //
         // prep_ref is preparation reference to be processed.
         // end_time is the time before serving time that the entire preparation,
         //          including all its sub-preparations, needs to be complete.
+        // merge_to is a reference to a preparation (column) with which the current
+        //          column should be merged, or null.
         //
         // Returns array of columns, each of which contains:
         //   prep_ref
         //   prep_end_time
         //   prep_steps
-        //   prep_merge     reference to preparation to which the column sub-preparatrion 
+        //   prep_merge_to  reference to preparation to which the column sub-preparatrion 
         //                  is merged when complete.
         //
         // where prep_steps is an array of:
         //   step_ref
         //   step_duration
         //   step_time
+        //   step_merge_to
+        //   step_add_from
+        //
+        // The result structure is an array of column descripotions that looks like this:
+        //
+        // [ { prep_ref:      "PreparedFood/<prep-name>"
+        //   , prep_end_time: <minutes>
+        //   , prep_merge_to: "PreparedFood/<to-prep-name>" /* or null */
+        //   , prep_steps:
+        //     [ { step_ref:      "PreparationStep/<step-name>"
+        //       , step_duration: <minutes>
+        //       , step_time:     <minutes>  /* step ends */
+        //       , step_merge_to: null
+        //       , step_add_from: "PreparedFood/<from_prep-name>" /* or null */
+        //       }
+        //     , {
+        //       }
+        //     :
+        //     , { step_ref:      null
+        //       , step_duration: 0
+        //       , step_time:     <minutes>  /* prep ends */
+        //       , step_merge_to: "PreparedFood/<to-prep-name>" /* last step only */
+        //       , step_add_from: null
+        //       }
+        //     ]
+        //   }
+        // , { prep_ref:      ...
+        //   , prep_end_time: ...
+        //   :
+        //   }
+        // :
+        // ]
         //
         let next_prep     = recipe.get_annalist_resource(prep_ref)
         let next_hold     = parseInt(next_prep["lr:prep_hold_duration"], 10) || 0
         let prep_end_time = next_hold + end_time
         let next_cols     = []
+        let last_step = 
+            { step_ref:         null
+            , step_duration:    0
+            , step_time:        end_time
+            , step_merge_to:    merge_to
+            , step_add_from:    null
+            }
         let next_col      = 
             { prep_ref:         prep_ref
             , prep_end_time:    end_time    // End of hold period
-            , prep_merge:       merge_to
-            , prep_steps:       []
+            , prep_merge_to:    merge_to
+            , prep_steps:       [last_step]
             }
 
         // Scan preparation steps in reverse order
@@ -90,7 +144,9 @@ var recipe = {
             let next_step = 
                 { step_ref:         step_ref
                 , step_duration:    step_duration
-                , step_time:        step_time    
+                , step_time:        step_time
+                , step_merge_to:    null   
+                , step_add_from:    null
                 }
             // Check for sub-preparation
             //
@@ -109,9 +165,10 @@ var recipe = {
                 if (food_type == "PreparedFood") {
                     let more_cols = recipe.get_step_times(step_food_ref, step_time, prep_ref)
                     next_cols.splice(0, 0, ...more_cols)
+                    next_step.step_add_from = step_food_ref
                 }
             }
-            // Update step_end_time for next step
+            // Insert step at start column and update step_end_time for next step
             next_col.prep_steps.splice(0,0, next_step)
             step_end_time = step_time
         }
@@ -120,14 +177,15 @@ var recipe = {
     },
 
     get_recipe_grid: function(preps) {
-        // Get recipe grid.
+        // Get recipe grid, organized by time-based rows, with additional
+        // information to assist formatting.
         //
         // preps is an array of columns with step timing, as 
         // returned by get_step_times.
         //
         // Returns a recipe grid structure containing:
         //
-        //   grid.cols  column header information @@@
+        //   grid.cols  column descriptions as returned by get_step_times
         //   grid.rows  recipe steps organized by rows corresponding to
         //              timed points during the overall preparation.
         //
@@ -141,6 +199,13 @@ var recipe = {
         //   step_ingr  an base ingredient that is required by one of the 
         //              steps described in this row.
         //
+        // Each element of step_cols contains the following information,
+        // which may be null if there is no corresponding value.
+        //   step_ref       PreparationStep entity reference, or null
+        //   step_time      step time (minutes to serving)
+        //   step_duration  step duration
+        //   step_merge_to  column to merge to
+        //   step_add_from  column to merge from
 
         // Initial definitions
         let head_steps = preps.map( prep => prep.prep_steps[0]) // Next step for each column
@@ -170,10 +235,6 @@ var recipe = {
         let grid =
             { cols:     preps
             , rows:     []
-            , row_init:
-                { time: -1
-                , cols: preps.map( prep => null )   // Init row withh null grid values
-                }
             }
         let [next_step_col, next_step_time, next_step] = head_steps.reduce(
             choose_next_step, [-1, -1, null]
@@ -186,6 +247,16 @@ var recipe = {
                 )
         }
         return grid
+    },
+
+    find_prep_col: function(grid, prep_ref) {
+        for (let col_num = 0; col_num < grid.cols.length ; col_num++) {
+            if (grid.cols[col_num].prep_ref == prep_ref) {
+                return col_num
+            }
+        }
+        console.error("find_prep_col: %s not found", prep_ref)
+        return null
     },
 
     add_to_grid: function(grid, step_col, add_step) {
@@ -204,16 +275,42 @@ var recipe = {
         //
         // grid         the grid under construction
         // step_col     the column number in which the next step is added
-        // step         a description of the step to be added, as created by `get_step_times`:
+        // add_step     a description of the step to be added, as created by `get_step_times`:
         //                  { step_ref:         -- reference Annalist step description
         //                  , step_time:        -- time-to-serve from start next step
         //                  , step_duration:    -- duration of step
+        //                  , step_merge_to:    -- prep merging to, or null
+        //                  , step_add_from:    -- prep merging from, or null
         //                  }
         console.log("recipe.add_to_grid[%s,%s]: %s", add_step.step_time, step_col, add_step.step_ref)
-        let new_row  = grid.row_init
-        new_row.time = add_step.step_time
-        new_row.cols[step_col] = add_step
-        grid.rows.push(new_row)
+        if (add_step.step_merge_to) {
+            // Merging columns: stay on last row
+            let old_row   = grid.rows[grid.rows.length-1]
+            old_row.cols[step_col]                = add_step
+            let merge_col = recipe.find_prep_col(grid, add_step.step_merge_to) 
+            old_row.cols[merge_col].step_add_from = grid.cols[step_col].prep_ref
+            for (let col = merge_col+1; col < step_col; col++) {
+                console.log("accross_col %s", col)
+                old_row.cols[col] =
+                    { step_ref: null
+                    , step_time: add_step.step_time
+                    , step_duration: add_step.step_duration
+                    , step_merge_to: null
+                    , step_add_from: grid.cols[step_col].prep_ref
+                    }
+            }
+            console.log("old_row: %s: %s", old_row.time, old_row.cols.toSource())
+            console.log("merge_col: %s :: %s, step_col %s :: %s", merge_col, typeof(merge_col), step_col, typeof(step_col))
+        } else {
+            let new_row =
+                { time: add_step.step_time
+                , cols: grid.cols.map( () => null )   // Init row with null grid values
+                }
+            new_row.cols[step_col] = add_step
+            // console.log("new_row: %s: %s", new_row.time, new_row.cols.toSource())
+            grid.rows.push(new_row)
+        }
+        return
     },
 
     draw_grid: function(grid) {
@@ -221,11 +318,14 @@ var recipe = {
         console.log("recipe.draw_grid")
         recipe.reset_grid()
         recipe.insert_grid_headers(grid.cols)
-        recipe.insert_grid_start(grid)
-        for (let row of grid.rows) {
-            recipe.insert_grid_row(grid, row)
+        let body        = recipe.insert_grid_empty_body()
+        let active_cols = grid.cols.map( () => false )
+        let num_rows    = grid.rows.length
+        recipe.insert_grid_start(grid, body, grid.rows[0], active_cols)
+        for (let row_num = 0; row_num < num_rows-2; row_num++ ) {
+            recipe.insert_grid_row(grid, body, row_num, active_cols)
         }
-        recipe.insert_grid_end(grid)
+        recipe.insert_grid_end(grid, body, grid.rows[num_rows-2], active_cols)
     },
 
     reset_grid: function() {
@@ -248,14 +348,6 @@ var recipe = {
                 <div class="recipe-spacer"></div>
             </div>
             `)
-
-        // let next_col      = 
-        //     { prep_ref:         prep_ref
-        //     , prep_end_time:    end_time    // End of hold period
-        //     , prep_merge:       merge_to
-        //     , prep_steps:       []
-        //     }
-
         for (let col of cols) {
             // Get prep details
             let col_prep = recipe.get_annalist_resource(col.prep_ref)
@@ -270,39 +362,147 @@ var recipe = {
             elem_head.find("span.col-ingredient.recipe-vessel").before(elem_vessel_col)
         }
         jQuery("div.recipe-diagram").html(elem_head)
-
-        // <div class="recipe-headers">
-        //     <div class="recipe-row">
-        //         <span class="col-time recipe-heading">Time</span>
-        //         <span class="col-process recipe-preparation">Kedgeree</span>
-        //         <span class="col-process recipe-preparation">Rice</span>
-        //         <span class="col-process recipe-preparation">Poached fish</span>
-        //         <span class="col-process recipe-preparation">Eggs</span>
-        //         <span class="col-ingredient recipe-heading">Ingredient</span>
-        //     </div>
-        //     <div class="recipe-row">
-        //         <span class="col-time recipe-vessel"></span>
-        //         <span class="col-process recipe-vessel">Use large pan/wok, enough for final result</span>
-        //         <span class="col-process recipe-vessel">Saucepan for rice</span>
-        //         <span class="col-process recipe-vessel">Wide, shallow pan</span>
-        //         <span class="col-process recipe-vessel">Small saucepan</span>
-        //         <span class="col-ingredient recipe-vessel"></span>
-        //     </div>
-        //     <div class="recipe-spacer"></div>
-        // </div>
     },
 
-    insert_grid_start: function(grid) {
-        console.log("recipe.insert_grid_start")
+    insert_grid_empty_body: function() {
+        // Insert and return empty grid body element
+        let elem_empty_body = jQuery(`
+            <div class="recipe-body">
+            </div>
+            `)
+        jQuery("div.recipe-diagram").append(elem_empty_body)
+        return elem_empty_body
     },
 
-    insert_grid_row: function(grid, row) {
+    insert_grid_start: function(grid, body, next_row, active_cols) {
+        console.log("recipe.insert_grid_start %s", grid.cols)
+        let elem_start_row = jQuery(`
+            <div class="recipe-row">
+                <span class="col-time"></span>
+                <span class="col-ingredient"></span>
+            </div>
+            `)
+        for (let col_num = 0; col_num < next_row.cols.length; col_num++ ) {
+            // NOTE: cannot re-use jQuery value for multiple inserts
+            let elem_prep_start
+            if (next_row.cols[col_num]) {
+                elem_prep_start = jQuery(`
+                    <span class="col-process time-slot recipe-prep-start"></span>
+                    `)
+                active_cols[col_num] = true
+            } else {
+                elem_prep_start = jQuery(`
+                    <span class="col-process time-slot recipe-skip"></span>
+                    `)
+            }
+            elem_start_row.find("span.col-ingredient").before(elem_prep_start)
+        }
+        body.append(elem_start_row)
+    },
+
+    insert_grid_row: function(grid, body, row_num, active_cols) {
         console.log("recipe.insert_grid_row")
+        let elem_row = jQuery(`
+            <div class="recipe-row">
+                <span class="col-time"></span>
+                <span class="col-ingredient"></span>
+            </div>
+            `)
+        // elem_row.find("span.col-ingredient").html(active_cols.toSource())
+        let this_row  = grid.rows[row_num]
+        let next_row  = grid.rows[row_num+1]
+        let num_cols  = this_row.cols.length
+        let ingr_refs = []
+        for (let col_num = 0; col_num < num_cols; col_num++) {
+            let elem_step = null
+            let col       = this_row.cols[col_num]
+            if (col) {
+                // console.log("Process track: %s, %s, %s", grid.cols[col_num].prep_ref, row_num, col_num)
+                if (col.step_ref) {
+                    let step_data  = recipe.get_annalist_resource(col.step_ref)
+                    let step_class = "recipe-step"
+                    if (col.step_add_from) {
+                        step_class = "recipe-prep-merge"
+                    }
+                    console.log("Step: %s, %s, %s", col.step_ref, step_data["rdfs:label"], col.step_merge_to)
+                    elem_step      = jQuery('<span class="col-process time-slot '+step_class+'"></span>')
+                    elem_step.html(step_data["rdfs:label"])
+                } else if (col.step_merge_to) {
+                    // No more to come in this col: merge left
+                    console.log("Step prep-end: %s, %s", col.step_ref, col.step_merge_to)
+                    active_cols[col_num] = false
+                    elem_step = jQuery(`
+                        <span class="col-process time-slot recipe-prep-end"></span>
+                        `)                        
+                } else if (col.step_add_from) {
+                    // Merge across inactive column
+                    console.log("Step prep-across: %s, %s", col.step_ref, col.step_add_from)
+                    elem_step = jQuery(`
+                        <span class="col-process time-slot recipe-prep-across"></span>
+                        `)                        
+                }
+            } else if (active_cols[col_num]) {
+                elem_step = jQuery(`
+                    <span class="col-process time-slot recipe-pass"></span>
+                    `)
+            } else if (next_row.cols[col_num] && next_row.cols[col_num].step_ref) {
+                // console.log("@@@ start track %s, %s", row_num, col_num)
+                // "recipe-prep-start"
+                elem_step = jQuery(`
+                    <span class="col-process time-slot recipe-prep-start"></span>
+                    `)
+                active_cols[col_num] = true            
+            } else {
+                // console.log("@@@ skip track %s, %s", row_num, col_num)
+                elem_step = jQuery(`
+                    <span class="col-process time-slot recipe-skip"></span>
+                    `)                        
+            }
+            elem_row.find("span.col-ingredient").before(elem_step)
+            elem_row.find("span.col-time").html(this_row.time.toString())
+        }
+        // Add ingredient(s)
+        for (ingr in ingr_refs) {
+            ....
+        }
+
+
+
+        // elem_row.find("span.col-ingredient").html(active_cols.toSource())
+        body.append(elem_row)
     },
 
-    insert_grid_end: function(grid) {
-        console.log("recipe.insert_grid_end")
+    insert_grid_end: function(grid, body, row, active_cols) {
+        console.log("recipe.insert_grid_end: %s", row.toSource())
+        let elem_end_row = jQuery(`
+            <div class="recipe-row">
+                <span class="col-time"></span>
+                <span class="col-ingredient"></span>
+            </div>
+            `)
+        let num_cols = row.cols.length
+        for (let col_num = 0; col_num < num_cols; col_num++) {
+            let col        = row.cols[col_num]
+            let col_active = active_cols[col_num]
+            let elem_step  = recipe.build_grid_cell(col, "recipe-end", col_active)
+            elem_end_row.find("span.col-ingredient").before(elem_step)
+        }
+        body.append(elem_end_row)
     },
+
+    build_grid_cell: function (col, step_class, col_active) {
+        let elem_step = undefined;
+        if (col && col.step_ref) {
+            console.log("col: %s", col.toSource())
+            let step_data  = recipe.get_annalist_resource(col.step_ref)
+            elem_step      = jQuery('<span class="col-process time-slot '+step_class+'"></span>')
+            elem_step.html(step_data["rdfs:label"])
+        } else {
+            elem_step = jQuery('<span class="col-process time-slot recipe-skip"></span>')
+        }
+        return elem_step
+    },
+
 
     // Recipe element read functions
     read_preparations: function(prep_ids, cols) {
@@ -413,18 +613,6 @@ var recipe = {
         //
         // This function reflects the Annalist JSON-LD pattern used for storing 
         // ordered lists of references in an entity.
-
-        // console.log("get_annalist_item_ids: %s", 
-        //     JSON.stringify(
-        //         entities.map(e => e["annal:id"])
-        //         )
-        //     )
-        // console.log("get_annalist_item_ids: %s", 
-        //     JSON.stringify(
-        //         entities.map(e => e[list_prop_uri].map(r => r[ref_prop_uri]))[0]
-        //         )
-        //     )
-
         return entities.map(e => e[list_prop_uri].map(r => r[ref_prop_uri])).flat()
     },
 
@@ -495,7 +683,7 @@ var recipe = {
     // Resource value cache
     //
     // After the initial pass in which resource values are located, read and cached
-    // subsequent operations can work from the cache without using promise values.
+    // subsequent operations can work synchronously from the cache.
 
     annalist_resource_cache: {},
 
