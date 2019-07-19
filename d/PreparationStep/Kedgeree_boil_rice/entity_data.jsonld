@@ -20,6 +20,6 @@
     }
   ],
   "lr:step_process": "Process/Simmer",
-  "rdfs:comment": "Boil rice",
+  "rdfs:comment": "# Boil rice\r\n\r\nRice should be very slightly underdone.",
   "rdfs:label": "Boil rice"
 }

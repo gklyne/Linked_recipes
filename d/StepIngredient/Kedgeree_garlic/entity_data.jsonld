@@ -16,6 +16,6 @@
   "lr:step_ingredient_food": "FoodStuff/Garlic",
   "lr:step_ingredient_form": "Finely sliced or chopped",
   "lr:step_ingredient_quantity": "Quantity/1_clove",
-  "rdfs:comment": "# Kedgeree garlic",
-  "rdfs:label": "Kedgeree garlic"
+  "rdfs:comment": "# Garlic\r\n\r\nFinely sliced or chopped",
+  "rdfs:label": "Garlic (1 clove)"
 }

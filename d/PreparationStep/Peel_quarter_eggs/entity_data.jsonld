@@ -5,17 +5,17 @@
     },
     "../../coll_context.jsonld"
   ],
-  "@id": "PreparationStep/Peel_eggs",
+  "@id": "PreparationStep/Peel_quarter_eggs",
   "@type": [
     "lr:PreparationStep",
     "annal:EntityData"
   ],
-  "annal:id": "Peel_eggs",
+  "annal:id": "Peel_quarter_eggs",
   "annal:type": "lr:PreparationStep",
   "annal:type_id": "PreparationStep",
   "lr:step_duration": "5",
   "lr:step_ingredient": [],
   "lr:step_process": "",
-  "rdfs:comment": "# Peel eggs",
-  "rdfs:label": "Peel eggs"
+  "rdfs:comment": "# Peel and quarter eggs",
+  "rdfs:label": "Peel and quarter eggs"
 }

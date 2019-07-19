@@ -28,6 +28,6 @@
     }
   ],
   "lr:vessel": "Saucepan",
-  "rdfs:comment": "# Kegeree rice\r\n",
-  "rdfs:label": "Kedgeree rice"
+  "rdfs:comment": "# Rice for kedgeree\r\n\r\nBoiled and washed, ready to be added to the main dish.  It should be very slightly underdone.",
+  "rdfs:label": "Rice for kedgeree"
 }

@@ -16,6 +16,6 @@
   "lr:step_ingredient_food": "FoodStuff/Onion",
   "lr:step_ingredient_form": "Finely chopped",
   "lr:step_ingredient_quantity": "Quantity/1_medium_onion",
-  "rdfs:comment": "# Kedgeree onion\r\n\r\nUse one medium onion, or a bunch of spring onions.",
-  "rdfs:label": "Kedgeree onion"
+  "rdfs:comment": "# Onion\r\n\r\nUse one medium onion, or a bunch of spring onions.",
+  "rdfs:label": "Onion (1 medium)"
 }

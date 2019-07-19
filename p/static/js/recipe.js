@@ -116,7 +116,11 @@ var recipe = {
         // ]
         //
         let next_prep     = recipe.get_annalist_resource(prep_ref)
-        let next_hold     = parseInt(next_prep["lr:prep_hold_duration"], 10) || 0
+        let next_hold     = 0
+        if (merge_to) {
+            // Include hold time if adding to another preparation
+            next_hold     = parseInt(next_prep["lr:prep_hold_duration"], 10) || 0
+        }
         let prep_end_time = next_hold + end_time
         let next_cols     = []
         let last_step = 
@@ -427,6 +431,13 @@ var recipe = {
                     console.log("Step: %s, %s, %s", col.step_ref, step_data["rdfs:label"], col.step_merge_to)
                     elem_step      = jQuery('<span class="col-process time-slot '+step_class+'"></span>')
                     elem_step.html(step_data["rdfs:label"])
+                    let ingr_items = step_data["lr:step_ingredient"]
+                    // console.log(`step_data["lr:step_ingredient"]: `, ingr_items.toSource())
+                    for (let ingr_num = 0; ingr_num < ingr_items.length; ingr_num++) {
+                        let ingr_item = ingr_items[ingr_num]
+                        // console.log(`ingr_item: %s, %s, %s`, ingr_item, ingr_item["@id"], ingr_item.toSource())
+                        ingr_refs.push(ingr_item["@id"])
+                    }
                 } else if (col.step_merge_to) {
                     // No more to come in this col: merge left
                     console.log("Step prep-end: %s, %s", col.step_ref, col.step_merge_to)
@@ -462,11 +473,12 @@ var recipe = {
             elem_row.find("span.col-time").html(this_row.time.toString())
         }
         // Add ingredient(s)
-        // for (ingr in ingr_refs) {
-        //     ....
-        // }
-
-
+        let col_ingr = elem_row.find("span.col-ingredient")
+        for (let ingr_ref of ingr_refs) {
+            let ingr_data = recipe.get_annalist_resource(ingr_ref)
+            let elem_ingr = jQuery(`<p>${ingr_data["rdfs:label"]}</p>`)
+            col_ingr.append(elem_ingr)
+        }
 
         // elem_row.find("span.col-ingredient").html(active_cols.toSource())
         body.append(elem_row)
@@ -698,6 +710,8 @@ var recipe = {
         let result = null
         if (resource_ref in recipe.annalist_resource_cache) {
             result = recipe.annalist_resource_cache[resource_ref]
+        } else {
+            console.log("Resource %s not in cache", resource_ref)
         }
         return result
     },

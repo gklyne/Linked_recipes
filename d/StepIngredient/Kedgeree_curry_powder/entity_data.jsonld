@@ -16,6 +16,6 @@
   "lr:step_ingredient_food": "FoodStuff/Curry_powder",
   "lr:step_ingredient_form": "Dry powder",
   "lr:step_ingredient_quantity": "Quantity/1_tbsp",
-  "rdfs:comment": "# Kedgeree curry powder\r\n\r\nI often add more then the recipe calls for.\r\n",
-  "rdfs:label": "Kedgeree curry powder"
+  "rdfs:comment": "# Curry powder\r\n\r\nI often add more then the recipe calls for.\r\n",
+  "rdfs:label": "Curry powder (1 tbsp, ++)"
 }

@@ -16,6 +16,6 @@
   "lr:step_ingredient_food": "FoodStuff/Ginger",
   "lr:step_ingredient_form": "Raw, peeled",
   "lr:step_ingredient_quantity": "Quantity/1_piece",
-  "rdfs:comment": "# Kedgeree ginger\r\n\r\nThe recipe says a \"thumb sized\" piece, but I tend to go for more (3-4 inches).",
-  "rdfs:label": "Kedgeree ginger"
+  "rdfs:comment": "# Ginger\r\n\r\nThe recipe says a \"thumb sized\" piece, but I tend to go for more (3-4 inches).",
+  "rdfs:label": "Ginger (1 piece, maybe more)"
 }

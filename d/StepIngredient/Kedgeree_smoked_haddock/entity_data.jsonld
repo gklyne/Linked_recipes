@@ -16,6 +16,6 @@
   "lr:step_ingredient_food": "FoodStuff/Smoked_haddock",
   "lr:step_ingredient_form": "Boned",
   "lr:step_ingredient_quantity": "Quantity/300_g",
-  "rdfs:comment": "# Kedgeree smoked haddock\r\n\r\nPreferably undied.",
-  "rdfs:label": "Kedgeree smoked haddock"
+  "rdfs:comment": "# Smoked haddock\r\n\r\nPreferably undied.",
+  "rdfs:label": "Smoked haddock (300g)"
 }

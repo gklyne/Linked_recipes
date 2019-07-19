@@ -55,6 +55,12 @@ span.col-ingredient {
     min-width: 10em;
 }
 
+span.col-ingredient > p {
+    margin:  0em;
+    padding: 0em;
+}
+
+/* Formatting applied to all tikmed elements in recipe */
 span.time-slot {
     border-top: solid lightgray ;
     border-top-width: 1px;

@@ -27,13 +27,10 @@
       "lr:prep_step": "PreparationStep/Leave_eggs"
     },
     {
-      "lr:prep_step": "PreparationStep/Peel_eggs"
-    },
-    {
-      "lr:prep_step": "PreparationStep/Quarter_eggs"
+      "lr:prep_step": "PreparationStep/Peel_quarter_eggs"
     }
   ],
   "lr:vessel": "Small saucepan",
-  "rdfs:comment": "# Kedgeree boiled, peeled and quartered eggs",
-  "rdfs:label": "Kedgeree boiled, peeled and quartered eggs"
+  "rdfs:comment": "# Boiled, peeled and quartered eggs",
+  "rdfs:label": "Boiled, peeled and quartered eggs"
 }
