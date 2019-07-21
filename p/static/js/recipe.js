@@ -303,7 +303,7 @@ var recipe = {
                     , step_add_from: grid.cols[step_col].prep_ref
                     }
             }
-            console.log("old_row: %s: %s", old_row.time, old_row.cols.toSource())
+            // console.log("old_row: %s: %s", old_row.time, old_row.cols.toSource())
             console.log("merge_col: %s :: %s, step_col %s :: %s", merge_col, typeof(merge_col), step_col, typeof(step_col))
         } else {
             let new_row =
@@ -490,7 +490,7 @@ var recipe = {
     },
 
     insert_grid_end: function(grid, body, row, active_cols) {
-        console.log("recipe.insert_grid_end: %s", row.toSource())
+        // console.log("recipe.insert_grid_end: %s", row.toSource())
         let elem_end_row = jQuery(`
             <div class="recipe-row">
                 <span class="col-time"></span>
@@ -510,7 +510,7 @@ var recipe = {
     build_grid_cell: function (col, step_class, col_active) {
         let elem_step = undefined;
         if (col && col.step_ref) {
-            console.log("col: %s", col.toSource())
+            // console.log("col: %s", col.toSource())
             let step_data  = recipe.get_annalist_resource(col.step_ref)
             elem_step      = jQuery('<span class="col-process time-slot '+step_class+'"></span>')
             elem_step.html(step_data["rdfs:label"])
