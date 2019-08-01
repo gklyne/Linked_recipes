@@ -58,6 +58,6 @@
     }
   ],
   "lr:vessel": "Large pan (to hold final result)",
-  "rdfs:comment": "# Kedgeree\r\n\r\nThis is based on a recipe by Jamie Oliver, collected for our family recipe collection by Mandy Klyne.\r\n\r\nView recipe diagram [here]($PAGE:recipe/recipe.html?id=$entity_id).\r\n\r\n",
+  "rdfs:comment": "# Kedgeree\r\n\r\nThis is based on a recipe by Jamie Oliver, collected for our family recipe collection by Mandy Klyne.\r\n\r\n<!-- View recipe diagram [here]($PAGE:recipe/recipe.html?id=$entity_id). -->\r\n\r\n",
   "rdfs:label": "Kedgeree"
 }

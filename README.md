@@ -16,15 +16,18 @@
 - [x] Don't include holding time for main recipe
 - [x] Fix code to run in browsers other than Firefox
 - [x] Only include raw ingredients (not sub-prep) in ingredients column
-- [ ] Get recipe description from data
-    - h2.page-heading.recipe-title > p
-- [ ] Define front-page for recipe collection
-- [ ] Inconsistency in display of last step for sub-preparation
+- [x] Get recipe description from data (needs tidying)
+    - Annalist: provide renderer or "pseudo-field" to construct description from rdfs:label + rdfs:title; then don't put title in description.
+- [x] Define front-page for recipe collection
+- [x] Fix inconsistency in display of last step for sub-preparation
 - [ ] Calculate and show quantities for ingredients
-- [ ] Time display format: -ve values
-- [ ] Time display: don't repeat same value over multiple rows
-- [ ] Time display: round times over (say) 10 minutes
+- [x] Time display format: -ve values
+- [x] Time display: don't repeat same value over multiple rows
+- [x] Time display: round times over (say) 10 minutes
 - [ ] Multiple ingredients per step
 - [ ] Reduce diagnostic tracing
 - [ ] Collapse rows where possible
 - [ ] Refactor cell rendering code (DRY)
+- [ ] Link grid elements back to Annalist
+- [ ] Link recipe back tp Annalist
+

@@ -15,9 +15,11 @@
 
 <body>
 
-    <h2 class="page-heading recipe-title">Recipe - @@name@@</h2>
+    <h2 class="page-heading recipe-title">Linked recipe</h2>
 
-    <p>@@Recipe description@@</p>
+    <div class="recipe-description">
+        <p>@@Recipe description@@</p>
+    </div>
 
     <div class="recipe-diagram">
         <p>
@@ -44,6 +46,7 @@
     <script src="../static/annalist/js/annalist.js"></script>
     -->
     <script src="../static/js/rdflib.min.js"></script>
+    <script src="../static/js/marked.min.js"></script>
     <script src="../static/js/recipe.js"></script>
     <script>
         // Use <base>/pages/recipe/index.html?id=recipe-id to access

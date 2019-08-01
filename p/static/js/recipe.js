@@ -321,20 +321,31 @@ var recipe = {
         // Assemble grid as HTML table
         console.log("recipe.draw_grid")
         recipe.reset_grid()
+        recipe.insert_page_header(grid.cols[0])
         recipe.insert_grid_headers(grid.cols)
         let body        = recipe.insert_grid_empty_body()
-        let active_cols = grid.cols.map( () => false )
+        let grid_status = {prev_time: -1, active_cols: grid.cols.map( () => false )}
         let num_rows    = grid.rows.length
-        recipe.insert_grid_start(grid, body, grid.rows[0], active_cols)
+        recipe.insert_grid_start(grid, body, grid.rows[0], grid_status)
         for (let row_num = 0; row_num < num_rows-2; row_num++ ) {
-            recipe.insert_grid_row(grid, body, row_num, active_cols)
+            recipe.insert_grid_row(grid, body, row_num, grid_status)
         }
-        recipe.insert_grid_end(grid, body, grid.rows[num_rows-2], active_cols)
+        recipe.insert_grid_end(grid, body, grid.rows[num_rows-2], grid_status)
     },
 
     reset_grid: function() {
         console.log("recipe.reset_grid")
         jQuery("div.recipe-diagram").html("")
+    },
+
+    insert_page_header: function(col) {
+        let col_prep     = recipe.get_annalist_resource(col.prep_ref)
+        // let recipe_title = // "Recipe - " + col_prep["rdfs:label"]
+        // let title_elem   = jQuery("h2.page-heading.recipe-title")
+        // title_elem.html(recipe_title)
+        let recipe_descr = marked(col_prep["rdfs:comment"])
+        let descr_elem   = jQuery("div.recipe-description > p")
+        descr_elem.html(recipe_descr)
     },
 
     insert_grid_headers: function(cols) {
@@ -378,7 +389,7 @@ var recipe = {
         return elem_empty_body
     },
 
-    insert_grid_start: function(grid, body, next_row, active_cols) {
+    insert_grid_start: function(grid, body, next_row, grid_status) {
         console.log("recipe.insert_grid_start %s", grid.cols)
         let elem_start_row = jQuery(`
             <div class="recipe-row">
@@ -393,7 +404,7 @@ var recipe = {
                 elem_prep_start = jQuery(`
                     <span class="col-process time-slot recipe-prep-start"></span>
                     `)
-                active_cols[col_num] = true
+                grid_status.active_cols[col_num] = true
             } else {
                 elem_prep_start = jQuery(`
                     <span class="col-process time-slot recipe-skip"></span>
@@ -404,7 +415,7 @@ var recipe = {
         body.append(elem_start_row)
     },
 
-    insert_grid_row: function(grid, body, row_num, active_cols) {
+    insert_grid_row: function(grid, body, row_num, grid_status) {
         console.log("recipe.insert_grid_row")
         let elem_row = jQuery(`
             <div class="recipe-row">
@@ -412,7 +423,6 @@ var recipe = {
                 <span class="col-ingredient"></span>
             </div>
             `)
-        // elem_row.find("span.col-ingredient").html(active_cols.toSource())
         let this_row  = grid.rows[row_num]
         let next_row  = grid.rows[row_num+1]
         let num_cols  = this_row.cols.length
@@ -441,7 +451,7 @@ var recipe = {
                 } else if (col.step_merge_to) {
                     // No more to come in this col: merge left
                     console.log("Step prep-end: %s, %s", col.step_ref, col.step_merge_to)
-                    active_cols[col_num] = false
+                    grid_status.active_cols[col_num] = false
                     elem_step = jQuery(`
                         <span class="col-process time-slot recipe-prep-end"></span>
                         `)                        
@@ -452,7 +462,7 @@ var recipe = {
                         <span class="col-process time-slot recipe-prep-across"></span>
                         `)                        
                 }
-            } else if (active_cols[col_num]) {
+            } else if (grid_status.active_cols[col_num]) {
                 elem_step = jQuery(`
                     <span class="col-process time-slot recipe-pass"></span>
                     `)
@@ -462,15 +472,27 @@ var recipe = {
                 elem_step = jQuery(`
                     <span class="col-process time-slot recipe-prep-start"></span>
                     `)
-                active_cols[col_num] = true            
+                grid_status.active_cols[col_num] = true            
             } else {
                 // console.log("@@@ skip track %s, %s", row_num, col_num)
                 elem_step = jQuery(`
                     <span class="col-process time-slot recipe-skip"></span>
                     `)                        
             }
+            let row_time = this_row.time
+            if (row_time > 20) {
+                // Round time up to multiple of 5 mins 
+                row_time = Math.ceil(row_time/5)*5
+            }
+            else if (row_time > 10) {
+                // Round time up to multiple of 2 mins 
+                row_time = Math.ceil(row_time/2)*2
+            }
             elem_row.find("span.col-ingredient").before(elem_step)
-            elem_row.find("span.col-time").html(this_row.time.toString())
+            if (row_time != grid_status.prev_time) {
+                elem_row.find("span.col-time").html("-" + row_time.toString())
+                grid_status.prev_time = row_time
+            }
         }
         // Add ingredient(s)
         let col_ingr = elem_row.find("span.col-ingredient")
@@ -485,11 +507,10 @@ var recipe = {
             }
         }
 
-        // elem_row.find("span.col-ingredient").html(active_cols.toSource())
         body.append(elem_row)
     },
 
-    insert_grid_end: function(grid, body, row, active_cols) {
+    insert_grid_end: function(grid, body, row, grid_status) {
         // console.log("recipe.insert_grid_end: %s", row.toSource())
         let elem_end_row = jQuery(`
             <div class="recipe-row">
@@ -500,8 +521,9 @@ var recipe = {
         let num_cols = row.cols.length
         for (let col_num = 0; col_num < num_cols; col_num++) {
             let col        = row.cols[col_num]
-            let col_active = active_cols[col_num]
-            let elem_step  = recipe.build_grid_cell(col, "recipe-end", col_active)
+            let col_active = grid_status.active_cols[col_num]
+            let step_class = (col && col.step_duration ? "recipe-step" : "recipe-end")
+            let elem_step  = recipe.build_grid_cell(col, step_class, col_active)
             elem_end_row.find("span.col-ingredient").before(elem_step)
         }
         body.append(elem_end_row)
@@ -519,7 +541,6 @@ var recipe = {
         }
         return elem_step
     },
-
 
     // Recipe element read functions
     read_preparations: function(prep_ids, cols) {

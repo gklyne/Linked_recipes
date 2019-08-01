@@ -1,0 +1,17 @@
+{
+  "@context": [
+    {
+      "@base": "../../"
+    },
+    "../../coll_context.jsonld"
+  ],
+  "@id": "_info/README",
+  "@type": [
+    "annal:Information"
+  ],
+  "annal:id": "README",
+  "annal:type": "annal:Information",
+  "annal:type_id": "_info",
+  "rdfs:comment": "# Linked recipes collection\r\n\r\nThis Annalist collection contains examples of linked recipes, along with a web browser app to render those recipes as a \"flowchart\", which I find is easier to follow when cooking than the conventional ingredients + wall-of-text description.\r\n\r\n## Collection navigation links\r\n\r\n- [List of recipes and prepared food used by them]($BASE:PreparedFood).\r\n- [List of base ingredients]($BASE:BaseIngredient).\r\n- [List of entity types used]($BASE:_type).\r\n\r\n- [Kegeree recipe diagram]($COLL:p/recipe/recipe.html?id=Kedgeree)\r\n- [Kedgeree eggs sub-recipe diagram]($COLL:p/recipe/recipe.html?id=Kedgeree_eggs)\r\n\r\n",
+  "rdfs:label": "README"
+}
