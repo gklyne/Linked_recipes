@@ -29,10 +29,11 @@
 
     <div class="footer">
         <div id="foot_info" class="info">
-            @@
         </div>
         <div id="foot_error" class="error">
-            @@
+        </div>
+        <div id="foot_update" class="button">
+        Flush cache
         </div>
     </div>
     
@@ -54,9 +55,15 @@
         const recipe_id = urlParams.get('id');
         const base_url  = new URL("../../d/", document.URL)
         console.log("Drawing recipe: %s from %s", recipe_id, base_url)
+        $(document).ready( () =>
+                {
+                $("div#foot_update").click(recipe.flush_annalist_resource_cache)
+                recipe.draw(base_url, recipe_id)
+                }
+            )
+
         // $(document).foundation();
         // annalist.resize_handler({});
-        recipe.draw(base_url, recipe_id)
     </script>
 
 </body>

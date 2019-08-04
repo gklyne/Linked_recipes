@@ -20,14 +20,17 @@
     - Annalist: provide renderer or "pseudo-field" to construct description from rdfs:label + rdfs:title; then don't put title in description.
 - [x] Define front-page for recipe collection
 - [x] Fix inconsistency in display of last step for sub-preparation
-- [ ] Calculate and show quantities for ingredients
 - [x] Time display format: -ve values
 - [x] Time display: don't repeat same value over multiple rows
 - [x] Time display: round times over (say) 10 minutes
+- [x] Link recipe diagram back to Annalist
+- [x] Link grid elements back to Annalist
+- [ ] Separate field (see also?) to link from Annalist to diagram
+- [ ] Calculate and show quantities for ingredients
 - [ ] Multiple ingredients per step
-- [ ] Reduce diagnostic tracing
 - [ ] Collapse rows where possible
-- [ ] Refactor cell rendering code (DRY)
-- [ ] Link grid elements back to Annalist
-- [ ] Link recipe back tp Annalist
+- [ ] Reduce diagnostic tracing
+- [x] Session-cache data for constructed recipe diagram
+- [ ] Provide means to flush cache...
+- [x] Refactor cell rendering code (DRY)
 

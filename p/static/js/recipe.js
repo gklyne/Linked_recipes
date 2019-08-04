@@ -2,6 +2,8 @@
 
 const RDFS = $rdf.Namespace("http://www.w3.org/2000/01/rdf-schema#")
 
+const COLL_BASE = "../../d/"
+
 function entity_ids(entities) {
     // For logging: extract ids from list of entities
     return entities.map(entity => entity["annal:id"])
@@ -340,9 +342,10 @@ var recipe = {
 
     insert_page_header: function(col) {
         let col_prep     = recipe.get_annalist_resource(col.prep_ref)
-        // let recipe_title = // "Recipe - " + col_prep["rdfs:label"]
-        // let title_elem   = jQuery("h2.page-heading.recipe-title")
-        // title_elem.html(recipe_title)
+        let recipe_title = 
+            `Linked recipe - <a href="${COLL_BASE}${col.prep_ref}">${col_prep["rdfs:label"]}</a>`
+        let title_elem   = jQuery("h2.page-heading.recipe-title")
+        title_elem.html(recipe_title)
         let recipe_descr = marked(col_prep["rdfs:comment"])
         let descr_elem   = jQuery("div.recipe-description > p")
         descr_elem.html(recipe_descr)
@@ -428,19 +431,29 @@ var recipe = {
         let num_cols  = this_row.cols.length
         let ingr_refs = []
         for (let col_num = 0; col_num < num_cols; col_num++) {
-            let elem_step = null
-            let col       = this_row.cols[col_num]
+            let elem_step  = null
+            let col        = this_row.cols[col_num]
+            let col_active = grid_status.active_cols[col_num]
             if (col) {
                 // console.log("Process track: %s, %s, %s", grid.cols[col_num].prep_ref, row_num, col_num)
                 if (col.step_ref) {
+                    //@@@@
+                    // let step_data  = recipe.get_annalist_resource(col.step_ref)
+                    // let step_class = "recipe-step"
+                    // if (col.step_add_from) {
+                    //     step_class = "recipe-prep-merge"
+                    // }
+                    // console.log("Step: %s, %s, %s", col.step_ref, step_data["rdfs:label"], col.step_merge_to)
+                    // elem_step      = jQuery('<span class="col-process time-slot '+step_class+'"></span>')
+                    // elem_step.html(step_data["rdfs:label"])
+                    //@@@@
                     let step_data  = recipe.get_annalist_resource(col.step_ref)
                     let step_class = "recipe-step"
                     if (col.step_add_from) {
                         step_class = "recipe-prep-merge"
                     }
-                    console.log("Step: %s, %s, %s", col.step_ref, step_data["rdfs:label"], col.step_merge_to)
-                    elem_step      = jQuery('<span class="col-process time-slot '+step_class+'"></span>')
-                    elem_step.html(step_data["rdfs:label"])
+                    elem_step = recipe.build_step_cell(col, step_data, step_class, col_active)
+                    // Collect references to ingredients for final column
                     let ingr_items = step_data["lr:step_ingredient"]
                     // console.log(`step_data["lr:step_ingredient"]: `, ingr_items.toSource())
                     for (let ingr_num = 0; ingr_num < ingr_items.length; ingr_num++) {
@@ -475,9 +488,7 @@ var recipe = {
                 grid_status.active_cols[col_num] = true            
             } else {
                 // console.log("@@@ skip track %s, %s", row_num, col_num)
-                elem_step = jQuery(`
-                    <span class="col-process time-slot recipe-skip"></span>
-                    `)                        
+                elem_step = recipe.build_skip_cell()
             }
             let row_time = this_row.time
             if (row_time > 20) {
@@ -506,7 +517,6 @@ var recipe = {
                 col_ingr.append(elem_ingr)                
             }
         }
-
         body.append(elem_row)
     },
 
@@ -523,22 +533,28 @@ var recipe = {
             let col        = row.cols[col_num]
             let col_active = grid_status.active_cols[col_num]
             let step_class = (col && col.step_duration ? "recipe-step" : "recipe-end")
-            let elem_step  = recipe.build_grid_cell(col, step_class, col_active)
+            let elem_step  = undefined
+            if (col && col.step_ref) {
+                let step_data = recipe.get_annalist_resource(col.step_ref)
+                elem_step  = recipe.build_step_cell(col, step_data, step_class, col_active)
+            } else {
+                elem_step  = recipe.build_skip_cell()
+            }
             elem_end_row.find("span.col-ingredient").before(elem_step)
         }
         body.append(elem_end_row)
     },
 
-    build_grid_cell: function (col, step_class, col_active) {
-        let elem_step = undefined;
-        if (col && col.step_ref) {
-            // console.log("col: %s", col.toSource())
-            let step_data  = recipe.get_annalist_resource(col.step_ref)
-            elem_step      = jQuery('<span class="col-process time-slot '+step_class+'"></span>')
-            elem_step.html(step_data["rdfs:label"])
-        } else {
-            elem_step = jQuery('<span class="col-process time-slot recipe-skip"></span>')
-        }
+    build_step_cell: function (col, step_data, step_class, col_active) {
+        // let step_data = recipe.get_annalist_resource(col.step_ref)
+        // console.log("Step: %s, %s, %s", col.step_ref, step_data["rdfs:label"], col.step_merge_to)
+        let elem_step = jQuery('<span class="col-process time-slot '+step_class+'"></span>')
+        elem_step.html(`<a href="${COLL_BASE}${col.step_ref}">${step_data["rdfs:label"]}</a>`)
+        return elem_step
+    },
+
+    build_skip_cell: function () {
+        let elem_step = jQuery('<span class="col-process time-slot recipe-skip"></span>')
         return elem_step
     },
 
@@ -723,19 +739,49 @@ var recipe = {
     // After the initial pass in which resource values are located, read and cached
     // subsequent operations can work synchronously from the cache.
 
-    annalist_resource_cache: {},
+    // annalist_resource_cache: {},
+ 
+    flush_annalist_resource_cache: function() {
+        sessionStorage.removeItem("annalist_resource_cache")
+        console.log("annalist_resource_cache flushed")
+    },
+ 
+    get_annalist_resource_cache: function() {
+        let resource_cache_str = sessionStorage.getItem("annalist_resource_cache")
+        // console.log("Resource cache %s", resource_cache_str)
+        let resource_cache = {}
+        try {
+            resource_cache = JSON.parse(resource_cache_str)
+        }
+        catch (error) {
+            console.error("annalist_resource_cache error %s (%s)", error, resource_cache_str)
+        }
+        if (resource_cache === null) {
+            resource_cache = {}
+        }
+        return resource_cache
+    },
+
+    save_annalist_resource_cache: function(resource_cache) {
+        // console.log("Save resource cache %s", JSON.stringify(resource_cache))
+        sessionStorage.setItem("annalist_resource_cache", JSON.stringify(resource_cache))
+        return resource_cache
+    },
 
     set_annalist_resource: function(resource_ref, resource_json) {
         // Save resource value in cache, and return resource.
-        recipe.annalist_resource_cache[resource_ref] = resource_json
+        let resource_cache = recipe.get_annalist_resource_cache()
+        resource_cache[resource_ref] = resource_json
+        recipe.save_annalist_resource_cache(resource_cache)
         return resource_json
     },
 
     get_annalist_resource: function(resource_ref) {
         // Returns cached resource value, or null.
+        let resource_cache = recipe.get_annalist_resource_cache()
         let result = null
-        if (resource_ref in recipe.annalist_resource_cache) {
-            result = recipe.annalist_resource_cache[resource_ref]
+        if (resource_ref in resource_cache) {
+            result = resource_cache[resource_ref]
         } else {
             console.log("Resource %s not in cache", resource_ref)
         }
