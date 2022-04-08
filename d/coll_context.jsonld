@@ -1,8 +1,8 @@
 {
   "@context": {
-    "_base_": "http://localhost:8000/annalist/c/Linked_recipes/d/",
-    "_coll_": "http://localhost:8000/annalist/c/Linked_recipes/",
-    "_site_": "http://localhost:8000/annalist/",
+    "_base_": "https://demo.annalist.net/annalist/c/Linked_recipes/d/",
+    "_coll_": "https://demo.annalist.net/annalist/c/Linked_recipes/",
+    "_site_": "https://demo.annalist.net/annalist/",
     "annal": "http://purl.org/annalist/2014/#",
     "annal:alias_source": {
       "@type": "@id",
@@ -69,12 +69,12 @@
     },
     "annal:field_id": {
       "@type": "@id",
-      "fid": "Group_fields",
-      "subfid": "Group_field_sel"
+      "fid": "List_fields",
+      "subfid": "List_field_sel"
     },
     "annal:field_placement": {
-      "fid": "Group_fields",
-      "subfid": "Group_field_placement"
+      "fid": "List_fields",
+      "subfid": "List_field_placement"
     },
     "annal:field_ref_field": {
       "@type": "@id",
@@ -116,8 +116,8 @@
       "vid": "Field_group_view"
     },
     "annal:id": {
-      "fid": "Entity_id",
-      "vid": "_initial_values"
+      "fid": "User_id",
+      "vid": "User_view"
     },
     "annal:inherit_from": {
       "@type": "@id",
@@ -156,8 +156,8 @@
     },
     "annal:property_uri": {
       "@type": "@id",
-      "fid": "Group_fields",
-      "subfid": "Group_field_property"
+      "fid": "View_fields",
+      "subfid": "View_field_property"
     },
     "annal:repeat_label_add": {
       "fid": "Field_repeat_label_add",
@@ -192,7 +192,7 @@
     },
     "annal:type_id": {
       "fid": "Entity_type",
-      "vid": "_initial_values"
+      "vid": "Default_view"
     },
     "annal:type_list": {
       "@type": "@id",
@@ -206,8 +206,8 @@
     },
     "annal:uri": {
       "@type": "@id",
-      "fid": "Enum_uri",
-      "vid": "Enum_view"
+      "fid": "Vocab_uri",
+      "vid": "Vocab_view"
     },
     "annal:user_permission": {
       "@container": "@set",
@@ -322,12 +322,12 @@
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
     "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
     "rdfs:comment": {
-      "fid": "Entity_comment",
-      "vid": "_initial_values"
+      "fid": "User_description",
+      "vid": "User_view"
     },
     "rdfs:label": {
-      "fid": "Entity_label",
-      "vid": "_initial_values"
+      "fid": "User_name",
+      "vid": "User_view"
     },
     "rdfs:seeAlso": {
       "@container": "@set",
