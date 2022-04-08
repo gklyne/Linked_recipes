@@ -16,6 +16,6 @@
   "lr:step_ingredient_food": "BaseIngredient/Lemon_juice",
   "lr:step_ingredient_form": "Juice",
   "lr:step_ingredient_quantity": "Quantity/from_2_lemons",
-  "rdfs:comment": "# Juice of 2 lemons\r\n\r\nIf not using fresh lemons, this would be about 4-6 tbsp (60-90ml)\r\n\r\nI'm don't think I use this much - maybe just one lemon.  Or one fresh lemon than add lemon juice to taste.\r\n",
+  "rdfs:comment": "# Juice of 2 lemons\r\n\r\nIf not using fresh lemons, this would be about 4-6 tbsp (60-90ml)\r\n\r\nI don't think I use this much - maybe just one lemon.  Or one fresh lemon than add lemon juice to taste.\r\n",
   "rdfs:label": "Juice of 2 lemons"
 }
